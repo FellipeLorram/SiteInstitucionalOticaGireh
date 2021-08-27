@@ -10,13 +10,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="index.css">
-
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
     <title>Ótica Girêh</title>
 </head>
 
 <body>
+    <div class="role_para_baixo">
+        <span>R</span>
+        <span>O</span>
+        <span>L</span>
+        <span>E</span>
+        <span>P</span>
+        <span>A</span>
+        <span>R</span>
+        <span>A</span>
+        <span>B</span>
+        <span>A</span>
+        <span>I</span>
+        <span>X</span>
+        <span>O</span>
+        <span class="material-icons-outlined">mouse</span>
+        <span id="infinite" class="material-icons">arrow_downward</span>
+    </div>
+
     <header class="navBar_container">
         <a href="" class="logo">LOGO</a>
         <ul>
@@ -30,6 +52,9 @@
                 <a href="#NossaHistoria" class="nav-link">Nossa História</a>
             </li>
             <li>
+                <a href="#OndeEstamos" class="nav-link">Onde Estamos</a>
+            </li>
+            <li>
                 <a href="#ConectSeConosco" class="nav-link">Conecte-se Conosco</a>
             </li>
         </ul>
@@ -41,7 +66,7 @@
                 <div class="col"></div>
                 <div class="col middle middle--home">
                     <h1>Ótica Girêh</h1>
-                    <p>Qualidade em visão</p>
+                    <p id="home_text">Qualidade em visão</p>
                 </div>
                 <div class="col"></div>
             </div>
@@ -53,10 +78,14 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col middle middle--quem-somos">
-                    <p id="quem_somos_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem atque
-                        animi blanditiis adipisci
-                        harum unde, recusandae labore veritatis laborum. Autem facilis nulla blanditiis distinctio sed
-                        commodi minus reprehenderit inventore ea?</p>
+                    <p id="quem_somos_text">O anúncio deve ser feito ainda nesta sexta, com o jogador chegando a Madri
+                        antes da próxima data Fifa com a seleção francesa, que jogará na próxima quarta-feira (1°). A
+                        tendência é que Mbappé sequer atue no domingo (29), quando o PSG encara o Reims, em Paris, no
+                        jogo que marcará a estreia de Lionel Messi.
+
+                        O presidente do PSG, Nasser Al-Khelaifi, demonstrou, após o sorteio da fase de grupos da
+                        Champions League, que não estava satisfeito com o que foi feito pelos merengues, mas não negou a
+                        possibilidade do atleta deixar o clube.</p>
                 </div>
                 <div class="col"></div>
             </div>
@@ -76,7 +105,62 @@
             </div>
 
     </section>
-    <section id="ConectSeConosco"></section>
+
+    <section id="OndeEstamos">
+        <span class="backText backText--onde-estamos">Onde Estamos</span>
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col middle middle--onde-estamos">
+                    <div class="onde_estamos-card">
+                        <div class="onde_estamos_card-header">Vila do Pinheiro</div>
+                        <div class="onde_estamos_card-body">
+                            <div class="card_body-map"></div>
+                            <div class="onde_estamos_card_body-infos">
+                                <div class="card_body-info_container">
+                                    <span class="card_body_info_container-info_icon material-icons-outlined">whatsapp</span>
+                                    <span class="card_body_info_container-info_text">(21) 98195-0372</span>
+                                </div>
+                                <div class="card_body-info_container">
+                                    <span class="card_body_info_container-info_icon"><i class="fab fa-instagram"></i></span>
+                                    <span class="card_body_info_container-info_text">@oticagirehpinheiro</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="onde_estamos-card">
+                        <div class="onde_estamos_card-header">Caju</div>
+                        <div class="onde_estamos_card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Veniam eum necessitatibus aperiam officia? Vitae iusto quidem et dolore dicta esse soluta,
+                            numquam, eum accusantium illo voluptate incidunt ipsum facilis. Error!</div>
+                    </div>
+                    <div class="onde_estamos-card">
+                        <div class="onde_estamos_card-header">Baixa do Sapateiro</div>
+                        <div class="onde_estamos_card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Veniam eum necessitatibus aperiam officia? Vitae iusto quidem et dolore dicta esse soluta,
+                            numquam, eum accusantium illo voluptate incidunt ipsum facilis. Error!</div>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+    </section>
+    <!--
+    <section id="ConectSeConosco">
+        <span class="backText backText--conectese-conosco">Conecte-se Conosco</span>
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col middle middle--conectese-conosco">
+                    <p id="conectese_conosco-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+                        atque
+                        animi blanditiis adipisci
+                        harum unde, recusandae labore veritatis laborum. Autem facilis nulla blanditiis distinctio sed
+                        commodi minus reprehenderit inventore ea?</p>
+                </div>
+                <div class="col"></div>
+            </div>
+    </section>
+    -->
 
     <script src="./index.js"></script>
 </body>
