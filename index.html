@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
@@ -13,11 +14,11 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="index.css">
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
-    <title>Ótica Girêh</title>
+    <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
@@ -40,35 +41,44 @@
     </div>
 
     <header class="navBar_container">
-        <div class="navBar_content">
-            <a href="" class="logo">LOGO</a>
-            <ul>
-                <li>
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li>
-                    <a href="#QuemSomos" class="nav-link">Quem Somos</a>
-                </li>
-                <li>
-                    <a href="#NossaHistoria" class="nav-link">Nossa História</a>
-                </li>
-                <!--
-                <li>
-                    <a href="#OndeEstamos" class="nav-link">Onde Estamos</a>
-                </li>
-                <li>
-                    <a href="#ConectSeConosco" class="nav-link">Conecte-se Conosco</a>
-                </li>-->
-            </ul>
+        <div class="logo_container">
+            <a href="#home" class="logo">LOGO</a>
+        </div>
+        <ul class="navlinks_container">
+            <li>
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li>
+                <a href="#QuemSomos" class="nav-link">Quem somos</a>
+            </li>
+            <li>
+                <a href="#NossaHistoria" class="nav-link">Nossa história</a>
+            </li>
+            <li>
+                <a href="#OndeEstamos" class="nav-link">Onde estamos</a>
+            </li>
+            <li>
+                <a href="#Produtos" class="nav-link">Produtos</a>
+            </li>
+            <li>
+                <a href="#FaleConosco" class="nav-link">Fale conosco</a>
+            </li>
+        </ul>
+        <div class="menu_toggle">
+            <span class="material-icons-outlined">
+                menu
+            </span>
         </div>
     </header>
-    <section class="animated" id="home">
+
+    <section id="home">
         <span class="backText home">Home</span>
         <div class="container">
             <h1 id="hero_title">Ótica Girêh</h1>
             <p id="hero_subtitle">Qualidade em visão</p>
         </div>
     </section>
+
 
     <section id="QuemSomos">
         <span class="backText backText--quem-somos">Quem Somos</span>
@@ -97,66 +107,9 @@
 
     </section>
 
-    <!--
-    <section id="OndeEstamos">
-        <span class="backText backText--onde-estamos">Onde Estamos</span>
-        <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col middle middle--onde-estamos">
-                    <div class="onde_estamos-card">
-                        <div class="onde_estamos_card-header">Vila do Pinheiro</div>
-                        <div class="onde_estamos_card-body">
-                            <div class="card_body-map"></div>
-                            <div class="onde_estamos_card_body-infos">
-                                <div class="card_body-info_container">
-                                    <span
-                                        class="card_body_info_container-info_icon material-icons-outlined">whatsapp</span>
-                                    <span class="card_body_info_container-info_text">(21) 98195-0372</span>
-                                </div>
-                                <div class="card_body-info_container">
-                                    <span class="card_body_info_container-info_icon"><i
-                                            class="fab fa-instagram"></i></span>
-                                    <span class="card_body_info_container-info_text">@oticagirehpinheiro</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="onde_estamos-card">
-                        <div class="onde_estamos_card-header">Caju</div>
-                        <div class="onde_estamos_card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Veniam eum necessitatibus aperiam officia? Vitae iusto quidem et dolore dicta esse soluta,
-                            numquam, eum accusantium illo voluptate incidunt ipsum facilis. Error!</div>
-                    </div>
-                    <div class="onde_estamos-card">
-                        <div class="onde_estamos_card-header">Baixa do Sapateiro</div>
-                        <div class="onde_estamos_card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Veniam eum necessitatibus aperiam officia? Vitae iusto quidem et dolore dicta esse soluta,
-                            numquam, eum accusantium illo voluptate incidunt ipsum facilis. Error!</div>
-                    </div>
-                </div>
-                <div class="col"></div>
-            </div>
-    </section>
-  
-    <section id="ConectSeConosco">
-        <span class="backText backText--conectese-conosco">Conecte-se Conosco</span>
-        <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col middle middle--conectese-conosco">
-                    <p id="conectese_conosco-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-                        atque
-                        animi blanditiis adipisci
-                        harum unde, recusandae labore veritatis laborum. Autem facilis nulla blanditiis distinctio sed
-                        commodi minus reprehenderit inventore ea?</p>
-                </div>
-                <div class="col"></div>
-            </div>
-    </section>
-    -->
 
-    <script src="./index.js"></script>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
