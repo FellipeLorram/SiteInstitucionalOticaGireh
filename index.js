@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Criando as cenas de animação
-
+/*
 let QuemSomosTimeLine = new TimelineMax();
 let NossaHistoriaLine = new TimelineMax();
 
@@ -26,7 +26,7 @@ const NossaHistoriaScene = new ScrollMagic.Scene({
     triggerElement: "#NossaHistoria",
 }).setTween(NossaHistoriaLine).addTo(controller);
 
-
+*/
 // Setando a posiçao no site
 const sections = document.querySelectorAll('section');
 
