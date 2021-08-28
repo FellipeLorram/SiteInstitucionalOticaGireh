@@ -5,18 +5,19 @@
     --white-color: #fff;
     --big-text-color: #024b42;
     --main-font: 'Dancing Script', cursive;
-    ;
     --nav-font: 'IBM Plex Sans Thai', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 body {
@@ -36,7 +37,7 @@ body {
 }
 
 .role_para_baixo span {
-    font-size: 13px;
+    font-size: 1.2rem;
     margin: 4px 0;
 }
 
@@ -50,18 +51,27 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 40px 120px;
+    justify-content: center;
     background: none;
     transition: all 0.5s ease-in-out;
     z-index: 2;
     font-family: var(--nav-font);
+    padding: 40px 120px;
+}
+
+.navBar_content {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navBar_container .logo {
-    font-size: 30px;
+    font-size: 3rem;
     text-decoration: none;
 }
 
@@ -81,7 +91,7 @@ body {
     position: relative;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 20px;
+    font-size: 2rem;
     color: var(--main-color);
     transition: all 0.5s;
 }
@@ -103,7 +113,7 @@ body {
 .nav-link:hover {
     text-decoration: none;
     margin: 0 20px;
-    font-size: 20px;
+    font-size: 2.2rem;
     color: var(--white-color);
 }
 
@@ -116,7 +126,7 @@ body {
 .nav-link.active {
     text-decoration: none;
     margin: 0 20px;
-    font-size: 20px;
+    font-size: 2.2rem;
     color: var(--white-color);
 }
 
@@ -132,8 +142,8 @@ body {
 }
 
 section {
-    width: 100%;
-    height: calc(100vh - 80px);
+    max-width: 100vw;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,15 +153,10 @@ section {
     position: relative;
 }
 
-#QuemSomos, #NossaHistoria {
-    margin: 30px 0 50px 0;
-    position: relative;
-}
-
 .backText {
     position: absolute;
     content: 'Home';
-    font-size: 300px;
+    font-size: 29rem;
     right: 1%;
     opacity: 5%;
     color: var(--main-color);
@@ -169,22 +174,28 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: 0.2fr 1.6fr 0.2fr;
-    align-items: center;
-    width: 100%;
-}
-
-.middle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    font-family: var(--nav-font);
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#hero_title, #hero_subtitle {
+    animation: niceAppear 1s;
+    font-family: var(--main-font);
+    font-size: 3rem;
+    color: var(--big-text-color);
+    opacity: 80%;
+    word-spacing: 8px;
+}
+
+#hero_title {
+    font-size: 9rem;
+}
+
+#nossa_historia-text, #quem_somos_text {
+    text-align: center;
+    font-size: 2rem;
 }
 
 .middle--onde-estamos {
@@ -193,39 +204,12 @@ section {
     gap: 15px;
 }
 
-.middle--home h1, .middle--home p {
-    animation: niceAppear 1s;
-    font-family: var(--main-font);
-    font-size: 35px;
-    color: var(--big-text-color);
-    opacity: 80%;
-    word-spacing: 8px;
-}
-
-#home_text {
-    font-size: 35px;
-}
-
-.middle h1 {
-    font-weight: bold;
-    font-size: 100px;
-    color: var(--big-text-color);
-}
-
-.middle p {
-    font-size: 20px;
-    color: var(--big-text-color);
-    opacity: 80%;
-    padding: 50px;
-    word-spacing: 8px;
-}
-
-#home_text {
-    padding: 0;
-}
-
 #quem_somos_text, #nossa_historia-text {
     text-align: center;
+    max-width: 80%;
+    font-family: var(--nav-font);
+    color: var(--big-text-color);
+    word-spacing: 0.2rem;
 }
 
 .onde_estamos-card {
@@ -267,7 +251,8 @@ section {
     height: 200px;
     background: var(--main-color-variant);
 }
-.onde_estamos_card_body-infos{
+
+.onde_estamos_card_body-infos {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,7 +263,7 @@ section {
     width: 100%;
 }
 
-.card_body-info_container{
+.card_body-info_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -287,7 +272,7 @@ section {
     margin: 7px 0;
 }
 
-.card_body_info_container-info_icon i{
+.card_body_info_container-info_icon i {
     font-size: 24px;
 }
 
@@ -295,6 +280,19 @@ section {
     padding: 10px 120px;
     background: white;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width: 780px) {
+    .sticky {
+        padding: 5px 20px;
+    }
+    
+    .navBar_container{
+        padding: 10px 30px;
+    }
+    .navBar_container ul{
+        display: none;
+    }
 }
 
 @keyframes right_to_left_back_text {
