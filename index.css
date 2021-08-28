@@ -138,6 +138,17 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--main-color);
+}
+
+.bg_fill .backText {
+    opacity: 20%;
+}
+
+.bg_fill {
+    background: var(--main-color-variant);
+    color: #fff;
+    box-shadow: inset 0px 0px 40px 40px var(--main-color);
 }
 
 .container {
@@ -148,7 +159,6 @@ section {
     font-family: var(--nav-font);
     flex-direction: column;
     padding: 0 1em;
-    color: var(--main-color);
 }
 
 .backText {
@@ -157,7 +167,6 @@ section {
     font-size: 29rem;
     right: 1%;
     opacity: 5%;
-    color: var(--main-color);
 }
 
 .backText.home {
@@ -201,13 +210,13 @@ section {
         padding: 5px;
     }
     .container {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .backText {
         font-size: 11rem;
     }
     #hero_title {
-        font-size: 5rem;
+        font-size: 5.5rem;
     }
     #hero_subtitle {
         font-size: 1.7rem;
