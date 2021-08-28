@@ -4,29 +4,29 @@ window.addEventListener('scroll', () => {
     const navBar = document.querySelector('.navBar_container')
     navBar.classList.toggle('sticky', window.scrollY > 0);
 });
-
 // Criando as cenas de animação
-/*
-let QuemSomosTimeLine = new TimelineMax();
-let NossaHistoriaLine = new TimelineMax();
+if (window.screen.width > 780) {
 
-const controller = new ScrollMagic.Controller();
+    let QuemSomosTimeLine = new TimelineMax();
+    let NossaHistoriaLine = new TimelineMax();
 
-QuemSomosTimeLine.from('.backText--quem-somos', .2, { x: -70, opacity: 0 });
-QuemSomosTimeLine.from('#quem_somos_text', 1, { x: 70, opacity: 0 });
-NossaHistoriaLine.from('.backText--nossa-historia', .2, { x: 100, opacity: 0 });
-NossaHistoriaLine.from('#nossa_historia-text', 1, { x: -70, opacity: 0 });
+    const controller = new ScrollMagic.Controller();
 
-const QuemSomosScene = new ScrollMagic.Scene({
-    triggerElement: "#QuemSomos",
-}).setTween(QuemSomosTimeLine).addTo(controller);
+    QuemSomosTimeLine.from('.backText--quem-somos', .2, { x: -70, opacity: 0 });
+    QuemSomosTimeLine.from('#quem_somos_text', 1, { x: 60, opacity: 0 });
+    NossaHistoriaLine.from('.backText--nossa-historia', .2, { x: 100, opacity: 0 });
+    NossaHistoriaLine.from('#nossa_historia-text', 1, { x: -70, opacity: 0 });
+
+    const QuemSomosScene = new ScrollMagic.Scene({
+        triggerElement: "#QuemSomos",
+    }).setTween(QuemSomosTimeLine).addTo(controller);
 
 
-const NossaHistoriaScene = new ScrollMagic.Scene({
-    triggerElement: "#NossaHistoria",
-}).setTween(NossaHistoriaLine).addTo(controller);
+    const NossaHistoriaScene = new ScrollMagic.Scene({
+        triggerElement: "#NossaHistoria",
+    }).setTween(NossaHistoriaLine).addTo(controller);
+}
 
-*/
 // Setando a posiçao no site
 const sections = document.querySelectorAll('section');
 
