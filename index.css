@@ -33,6 +33,7 @@ body {
     flex-direction: column;
     padding: 20px;
     opacity: .5;
+    margin-left: 10px;
 }
 
 .role_para_baixo span {
