@@ -10,6 +10,9 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
     overflow-x: hidden;
 }
 
@@ -18,10 +21,6 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-}
-
-body {
-    overflow-x: hidden;
 }
 
 .role_para_baixo {
@@ -46,54 +45,48 @@ body {
     margin-top: 0;
 }
 
+.menu_toggle {
+    display: none;
+    color: var(--main-color);
+}
+
 .navBar_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 120px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    max-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: none;
     transition: all 0.5s ease-in-out;
     z-index: 2;
     font-family: var(--nav-font);
-    padding: 40px 120px;
 }
 
-.navBar_content {
-    width: 100%;
-    max-width: 1800px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navBar_container .logo {
-    font-size: 3rem;
+.logo_container a {
+    font-size: 4rem;
     text-decoration: none;
+    color: var(--main-color);
 }
 
-.navBar_container ul {
-    position: relative;
+.navlinks_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navBar_container ul li {
+.navlinks_container li {
     list-style: none;
-    position: relative;
 }
 
-.nav-link {
-    position: relative;
+.navlinks_container li a {
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 1em;
     font-size: 2rem;
     color: var(--main-color);
-    transition: all 0.5s;
+    position: relative;
 }
 
 .nav-link::before {
@@ -113,7 +106,6 @@ body {
 .nav-link:hover {
     text-decoration: none;
     margin: 0 20px;
-    font-size: 2.2rem;
     color: var(--white-color);
 }
 
@@ -142,15 +134,21 @@ body {
 }
 
 section {
-    max-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#home {
-    position: relative;
+.container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-family: var(--nav-font);
+    flex-direction: column;
+    padding: 0 1em;
+    color: var(--main-color);
 }
 
 .backText {
@@ -163,117 +161,21 @@ section {
 }
 
 .backText.home {
-    animation: right_to_left_back_text 1s ease-in-out;
-}
-
-.backText--nossa-historia {
-    right: 1%;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
+    animation: right_to_left_back_text .8s ease-in-out;
 }
 
 #hero_title, #hero_subtitle {
-    animation: niceAppear 1s;
     font-family: var(--main-font);
-    font-size: 3rem;
     color: var(--big-text-color);
-    opacity: 80%;
-    word-spacing: 8px;
 }
 
 #hero_title {
-    font-size: 9rem;
+    font-size: 10rem;
 }
 
-#nossa_historia-text, #quem_somos_text {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.middle--onde-estamos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-#quem_somos_text, #nossa_historia-text {
-    text-align: center;
-    max-width: 80%;
-    font-family: var(--nav-font);
-    color: var(--big-text-color);
-    word-spacing: 0.2rem;
-}
-
-.onde_estamos-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: var(--nav-font);
-    font-size: 22px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    color: var(--big-text-color);
-    padding: 20px;
-    width: 355px;
-    max-width: 355px;
-    justify-self: center;
-}
-
-.onde_estamos_card-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.onde_estamos_card-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-}
-
-.card_body-map {
-    width: 100%;
-    padding: 2px;
-    height: 200px;
-    background: var(--main-color-variant);
-}
-
-.onde_estamos_card_body-infos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 17px;
-    width: 100%;
-}
-
-.card_body-info_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 5px;
-    margin: 7px 0;
-}
-
-.card_body_info_container-info_icon i {
-    font-size: 24px;
+#hero_subtitle {
+    font-size: 4rem;
+    opacity: .8;
 }
 
 .sticky {
@@ -283,15 +185,36 @@ section {
 }
 
 @media(max-width: 780px) {
-    .sticky {
-        padding: 5px 20px;
+    .navBar_container {
+        padding: 10px;
     }
-    
-    .navBar_container{
-        padding: 10px 30px;
-    }
-    .navBar_container ul{
+    .navlinks_container {
         display: none;
+    }
+    .logo_container a {
+        font-size: 3rem;
+    }
+    .menu_toggle {
+        display: block;
+    }
+    .sticky {
+        padding: 5px;
+    }
+    .container {
+        font-size: 2rem;
+    }
+    .backText {
+        font-size: 11rem;
+    }
+    #hero_title {
+        font-size: 5rem;
+    }
+    #hero_subtitle {
+        font-size: 1.7rem;
+        opacity: .8;
+    }
+    .role_para_baixo span {
+        font-size: 1rem;
     }
 }
 
@@ -303,28 +226,6 @@ section {
     to {
         right: 1%;
         opacity: 5%;
-    }
-}
-
-@keyframes BottomToTop {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 0.5;
-    }
-}
-
-@keyframes niceAppear {
-    from {
-        opacity: 0;
-        transform: scale(0);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
     }
 }
 
