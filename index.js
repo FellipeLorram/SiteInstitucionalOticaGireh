@@ -7,13 +7,16 @@ window.addEventListener('scroll', () => {
 
 // Animação subtitle main
 const subtitleWord = ['Visão', 'Atendimento', 'Entrega', 'Lentes', 'Armações']
-
+let wordCount = 0
 const subtitleAnimate = document.querySelector('#hero_subtitle span');
-subtitleAnimate.innerHTML = subtitleWord[0]
+subtitleAnimate.innerHTML = subtitleWord[wordCount]
 
-subtitleWord.forEach(sub => {
-    setTimeout(() => subtitleAnimate.innerHTML = sub, 5000);
-});
+setInterval(() => {
+    wordCount++
+    if (wordCount >= subtitleWord.length) wordCount = 0;
+    subtitleAnimate.innerHTML = subtitleWord[wordCount]
+}, 3000)
+
 
 
 // Criando as cenas de animação
