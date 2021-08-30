@@ -4,6 +4,18 @@ window.addEventListener('scroll', () => {
     const navBar = document.querySelector('.navBar_container')
     navBar.classList.toggle('sticky', window.scrollY > 0);
 });
+
+// Animação subtitle main
+const subtitleWord = ['Visão', 'Atendimento', 'Entrega', 'Lentes', 'Armações']
+
+const subtitleAnimate = document.querySelector('#hero_subtitle span');
+subtitleAnimate.innerHTML = subtitleWord[0]
+
+subtitleWord.forEach(sub => {
+    setTimeout(() => subtitleAnimate.innerHTML = sub, 5000);
+});
+
+
 // Criando as cenas de animação
 if (window.screen.width > 780) {
 
