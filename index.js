@@ -5,20 +5,6 @@ window.addEventListener('scroll', () => {
     navBar.classList.toggle('sticky', window.scrollY > 0);
 });
 
-// Animação subtitle main
-const subtitleWord = ['Visão', 'Atendimento', 'Entrega', 'Lentes', 'Armações']
-let wordCount = 0
-const subtitleAnimate = document.querySelector('#hero_subtitle span');
-subtitleAnimate.innerHTML = subtitleWord[wordCount]
-
-setInterval(() => {
-    wordCount++
-    if (wordCount >= subtitleWord.length) wordCount = 0;
-    subtitleAnimate.innerHTML = subtitleWord[wordCount]
-}, 3000)
-
-
-
 // Criando as cenas de animação
 if (window.screen.width > 780) {
 
@@ -41,7 +27,6 @@ if (window.screen.width > 780) {
         triggerElement: "#NossaHistoria",
     }).setTween(NossaHistoriaLine).addTo(controller);
 }
-
 // Setando a posiçao no site
 const sections = document.querySelectorAll('section');
 
