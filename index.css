@@ -164,6 +164,14 @@ section {
     text-align: left;
 }
 
+@media (max-width: 32rem){
+    .icon__dow {
+        position: absolute;
+        bottom: 15px;
+        margin: 0 auto;
+    }
+}
+
 
 @keyframes linear__color_borded {
     0% {
