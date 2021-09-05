@@ -165,10 +165,8 @@ section {
 }
 
 @media (max-width: 32rem){
-    .icon__dow {
-        position: absolute;
-        bottom: 25px;
-        margin: 0 auto;
+    .icon__dow {       
+        bottom: 55px;
     }
 }
 
