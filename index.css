@@ -138,7 +138,7 @@ section {
 }
 
 .icon__dow {
-    position: absolute;
+    position: fixed;
     bottom: 5px;
     margin: 0 auto;
 }
@@ -165,8 +165,8 @@ section {
 }
 
 @media (max-width: 32rem){
-    .icon__dow {       
-        bottom: 55px;
+    .icon__dow {
+        bottom: 15px;
     }
 }
 
