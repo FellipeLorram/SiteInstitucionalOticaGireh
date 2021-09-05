@@ -20,6 +20,7 @@ body {
 }
 
 /* -------------------- nav bar -------------------- */
+
 .nav__bar {
     display: flex;
     align-items: center;
@@ -100,7 +101,7 @@ section {
     width: fit-content;
 }
 
-.container.home p{
+.container.home p {
     font-size: clamp(0.2rem, 3vw + 0.2rem, 1rem);
     position: relative;
 }
@@ -164,12 +165,35 @@ section {
     text-align: left;
 }
 
-@media (max-width: 32rem){
+/* -------------------- onde estamos -------------------- */
+
+.container.onde__estamos {
+    gap: 2.5rem;
+}
+
+.onde__estamos--item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.onde__estamos--item-text{
+    border: 1px solid red;
+    width: 100%;
+}
+.onde__estamos--item-image{
+    border: 1px solid red;
+    width: 100%;
+    min-height: 100%;
+}
+
+@media (max-width: 32rem) {
     .icon__dow {
         bottom: 15px;
     }
 }
-
 
 @keyframes linear__color_borded {
     0% {
