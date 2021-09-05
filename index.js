@@ -1,50 +1,31 @@
-// Animação da navBar
-
 window.addEventListener('scroll', () => {
-    const navBar = document.querySelector('.navBar_container')
-    navBar.classList.toggle('sticky', window.scrollY > 0);
+    const iconDow = document.querySelector('.icon__dow a')
+    iconDow.classList.toggle('hide', window.scrollY > 300);
 });
 
 // Criando as cenas de animação
-if (window.screen.width > 780) {
 
-    let QuemSomosTimeLine = new TimelineMax();
-    let NossaHistoriaLine = new TimelineMax();
+const title = 'Ótica Girêh'
+const subTitle = 'Qualidade em visão'
+let index = 0;
+let letter = '';
 
-    const controller = new ScrollMagic.Controller();
+const titleInerval = setInterval(() => {
+    letter = title.slice(0, ++index);
 
-    QuemSomosTimeLine.from('.backText--quem-somos', .2, { x: -70, opacity: 0 });
-    QuemSomosTimeLine.from('#quem_somos_text', 1, { x: 60, opacity: 0 });
-    NossaHistoriaLine.from('.backText--nossa-historia', .2, { x: 100, opacity: 0 });
-    NossaHistoriaLine.from('#nossa_historia-text', 1, { x: -70, opacity: 0 });
+    document.querySelector('.home__hero_title').textContent = letter;
 
-    const QuemSomosScene = new ScrollMagic.Scene({
-        triggerElement: "#QuemSomos",
-    }).setTween(QuemSomosTimeLine).addTo(controller);
+}, 150);
 
+setTimeout(() => {
+    clearInterval(titleInerval);
+    document.querySelector('.home__hero_title').classList.add('inactive')
+    index = 0;
 
-    const NossaHistoriaScene = new ScrollMagic.Scene({
-        triggerElement: "#NossaHistoria",
-    }).setTween(NossaHistoriaLine).addTo(controller);
-}
-// Setando a posiçao no site
-const sections = document.querySelectorAll('section');
+    const subTitleInterval = setInterval(() => {
+        letter = subTitle.slice(0, ++index);
 
-const observer = new IntersectionObserver(entries => {
-    const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
+        document.querySelector('.home__hero_subtitle').textContent = letter;
 
-    const navLinks = document.querySelectorAll('.nav-link')
-    navLinks.forEach(link => {
-        if (visibleSection) link.classList.remove('active')
-    });
-
-
-    navLinks.forEach(link => {
-        if (visibleSection && link.href.split('#')[1] == visibleSection.target.id) {
-            link.classList.add('active')
-        }
-    });
-
-}, { threshold: 0.5 });
-
-sections.forEach(section => observer.observe(section));
+    }, 150)
+}, 2300);
