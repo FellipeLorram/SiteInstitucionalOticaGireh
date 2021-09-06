@@ -210,71 +210,71 @@ section {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
     gap: 2rem;
 }
-.onde__estamos--item-info {
-    width: 100%;
-    text-align: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1rem;
+
+.img__container img {
+    width: 6.25rem;
 }
 
-.onde__estamos_item_info_container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-}
-
-.onde__estamos--item-info span {
-    font-size: clamp(0.1rem, 3vw + 0.1rem, 1rem);
-}
-.onde__estamos--item-info svg {
-    width: clamp(0.2rem, 3vw + 0.2rem, 1rem);
-    height: clamp(0.2rem, 3vw + 0.2rem, 1rem);
-}
-
-.onde__estamos--item-text.middle {
-    text-align: left;
-}
-
-.onde__estamos--item-image {
-    width: 50%;
-    max-height: 50%;
+.info__container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 0.5rem;
 }
 
-.onde__estamos--item-image img {
+.info__container .info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
     width: 100%;
-    max-width: 10rem;
-    height: 100%;
-    max-height: 10rem;
+}
+
+.info__container .info.header span {
+    font-size: clamp(0.5rem, 3vw + 0.5rem, 1.3rem);
+}
+
+.info__container .info span {
+    font-size: clamp(0.2rem, 3vw + 0.2rem, 1rem);
+}
+
+.info__container .info .info_text {
+    margin-left: 0.5rem;
+}
+
+.info__container .info span.address {
+    font-size: clamp(0.2rem, 2vw + 0.2rem, 1rem);
+    text-align: left;
 }
 
 @media (max-width: 25rem) {
-    .container.onde__estamos {
-        gap: 2rem;
+    .more_info__container {
+        display: none;
+    }
+    .onde__estamos--item {
+        justify-content: flex-start;
+        gap: 1rem;
+        flex-direction: row;
+    }
+    .onde__estamos--item.middle {
+        justify-content: flex-end;
+    }
+    .info_text br {
+        display: none;
+    }
+    .img__container img {
+        width: 5rem;
     }
     
-    .onde__estamos--item {
-        text-align: justify;
-        gap: 1rem;
-    }
-    .onde__estamos--item-info{
-        gap: 0.5rem;
-    }
-    .onde__estamos--item-image{
-        width: 100%;
-        justify-content: center;
-    }
-
-    .onde__estamos_item_info_container{
-        justify-content: center;
+    .info__container .info {
+        justify-content: flex-start;
     }
 }
 
@@ -283,6 +283,8 @@ section {
         bottom: 15px;
     }
 }
+
+@media (max-width: 22.5rem) {}
 
 @keyframes linear__color_borded {
     0% {
