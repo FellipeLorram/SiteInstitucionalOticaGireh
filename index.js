@@ -5,27 +5,47 @@ window.addEventListener('scroll', () => {
 
 // Criando as cenas de animação
 
-const title = 'Ótica Girêh'
-const subTitle = 'Qualidade em visão'
-let index = 0;
-let letter = '';
+const glassIcon = document.querySelector('.icon svg');
+const iconConainer = document.querySelector('.icon__conatainer');
 
-const titleInerval = setInterval(() => {
-    letter = title.slice(0, ++index);
+glassIcon.addEventListener('click', e => {
+    glassIcon.parentElement.classList.add('with_glasses');
 
-    document.querySelector('.home__hero_title').textContent = letter;
+    setTimeout(() => {
+        iconConainer.style.display = "none";
+        document.querySelector('.container').classList.remove('blurred')
+    }, 300);
+});
 
-}, 150);
+const intervalAnimation = setInterval(() => {
+    if (glassIcon.parentElement.classList.contains('with_glasses')) {
+        clearInterval(intervalAnimation)
+        document.querySelector('.home__hero_title').textContent = '';
+        document.querySelector('.home__hero_subtitle').textContent = '';
 
-setTimeout(() => {
-    clearInterval(titleInerval);
-    document.querySelector('.home__hero_title').classList.add('inactive')
-    index = 0;
+        const title = 'Ótica Girêh'
+        const subTitle = 'Qualidade em visão.'
+        let index = 0;
+        let letter = '';
 
-    const subTitleInterval = setInterval(() => {
-        letter = subTitle.slice(0, ++index);
+        const titleInerval = setInterval(() => {
+            letter = title.slice(0, ++index);
 
-        document.querySelector('.home__hero_subtitle').textContent = letter;
+            document.querySelector('.home__hero_title').textContent = letter;
 
-    }, 150)
-}, 2300);
+        }, 150);
+
+        setTimeout(() => {
+            clearInterval(titleInerval);
+            document.querySelector('.home__hero_title').classList.add('inactive')
+            index = 0;
+
+            const subTitleInterval = setInterval(() => {
+                letter = subTitle.slice(0, ++index);
+
+                document.querySelector('.home__hero_subtitle').textContent = letter;
+
+            }, 150)
+        }, 2300);
+    }
+}, 200)
