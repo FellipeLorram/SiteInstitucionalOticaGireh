@@ -14,7 +14,7 @@ glassIcon.addEventListener('click', e => {
     setTimeout(() => {
         iconConainer.style.display = "none";
         document.querySelector('.container').classList.remove('blurred')
-    }, 300);
+    }, 700);
 });
 
 const intervalAnimation = setInterval(() => {
@@ -48,4 +48,43 @@ const intervalAnimation = setInterval(() => {
             }, 150)
         }, 2300);
     }
-}, 200)
+}, 500)
+
+
+// Maps
+
+function initMap() {
+    const mapCaju = new google.maps.Map(document.getElementById("map_caju"), {
+        center: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        zoom: 18,
+    });
+
+
+    const markerCaju = new google.maps.Marker({
+        position: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        map: mapCaju,
+    })
+
+    const mapPinheiro = new google.maps.Map(document.getElementById("map_pinheiro"), {
+        center: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        zoom: 18,
+    });
+
+
+    const markerPinheiro = new google.maps.Marker({
+        position: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        map: mapPinheiro,
+    })
+
+    const mapBaixa = new google.maps.Map(document.getElementById("map_baixa"), {
+        center: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        zoom: 18,
+    });
+
+
+    const markerBaixa = new google.maps.Marker({
+        position: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        map: mapBaixa,
+    })
+
+}
