@@ -14,7 +14,7 @@ glassIcon.addEventListener('click', e => {
     setTimeout(() => {
         iconConainer.style.display = "none";
         document.querySelector('.container').classList.remove('blurred')
-    }, 700);
+    }, 1000);
 });
 
 const intervalAnimation = setInterval(() => {
@@ -50,6 +50,40 @@ const intervalAnimation = setInterval(() => {
     }
 }, 500)
 
+const quemSomosText = ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi natus quidem minima cupiditate architecto
+assumenda excepturi omnis saepe aspernatur recusandae perspiciatis nihil, voluptate dolor adipisci,
+animi
+non ipsum provident rem.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quos impedit debitis exercitationem
+explicabo soluta voluptas esse optio earum inventore nulla nihil dolore veritatis dolorem porro
+deserunt, eius incidunt at.`
+let quemSomosTextIndex = 0;
+let quemSomosTextLetter = '';
+
+const sections = document.querySelectorAll('section');
+const quemSomosTextContainer = document.querySelector('.quem__somos p')
+
+
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
+        if (visibleSection && visibleSection.target.id === 'QuemSomos') {
+            setInterval(() => {
+                quemSomosTextLetter = quemSomosText.slice(0, ++quemSomosTextIndex);
+
+                quemSomosTextContainer.textContent = quemSomosTextLetter;
+
+            }, 5);
+
+        }
+    },
+    { threshold: 0.5 }
+);
+
+setInterval(() => {
+    sections.forEach((section) => observer.observe(section));
+}, 500)
 
 // Maps
 
@@ -66,13 +100,13 @@ function initMap() {
     })
 
     const mapPinheiro = new google.maps.Map(document.getElementById("map_pinheiro"), {
-        center: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        center: { lat: -22.8674477, lng: -43.2354215 },
         zoom: 18,
     });
 
 
     const markerPinheiro = new google.maps.Marker({
-        position: { lat: -22.881212831181884, lng: -43.228010456483204 },
+        position: { lat: -22.8674477, lng: -43.2354215 },
         map: mapPinheiro,
     })
 
@@ -88,3 +122,4 @@ function initMap() {
     })
 
 }
+
