@@ -63,7 +63,7 @@ body {
 .nav__bar--container {
     padding: 2.5em 2em;
     width: 100%;
-    max-width: 50rem;
+    max-width: 55rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,7 +102,7 @@ body {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -194,10 +194,28 @@ section {
 
 /* -------------------- quem somos -------------------- */
 
+
+
+.container.quem__somos h1 {
+    font-size: clamp(0.5rem, 3vw + 0.5rem, 2rem);
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    font-style: italic;
+}
 .container.quem__somos p {
     font-size: clamp(0.2rem, 3vw + 0.2rem, 1rem);
     position: relative;
     text-align: left;
+}
+
+.container.quem__somos p::after {
+    content: '';
+    width: 2px;
+    position: absolute;
+    height: 1.2rem;
+    background: white;
+    animation: blink 0.7s ease infinite;
 }
 
 /* -------------------- onde estamos -------------------- */
@@ -216,23 +234,28 @@ section {
     padding: 0.5rem;
 }
 
-.onde__estamos--item:nth-child(1), .onde__estamos--item:nth-child(3) {
+.onde__estamos--item_container:nth-child(1), .onde__estamos--item_container:nth-child(3) {
     border-bottom: 0.2px solid rgba(255, 255, 255, 0.3);
     border-left: 0.2px solid rgba(255, 255, 255, 0.3);
 }
 
-.onde__estamos--item:nth-child(2) {
+.onde__estamos--item_container:nth-child(2) {
     border-bottom: 0.2px solid rgba(255, 255, 255, 0.3);
     border-right: 0.2px solid rgba(255, 255, 255, 0.3);
 }
 
-.img__container img {
-    width: 6.25rem;
+.map_container {
+    width: 50%;
+    height: 100%;
 }
 
 .map {
-    width: 12.5rem;
+    width: 100%;
     height: 12.5rem;
+}
+
+.onde__estamos--item_container {
+    width: 100%;
 }
 
 .info__container {
@@ -241,6 +264,21 @@ section {
     flex-direction: column;
     height: 100%;
     gap: 1rem;
+}
+
+.onde__estamos--item_header {
+    text-align: left;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-style: italic;
+}
+
+.onde__estamos--item_header h1 {
+    font-weight: 100;
+}
+
+.onde__estamos--item_header.middle {
+    text-align: right;
 }
 
 .info__container .info {
@@ -261,6 +299,10 @@ section {
 
 .info__container .info .info_text {
     margin-left: 0.5rem;
+    font-weight: 100;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(0.2rem, 3vw + 0.2rem, 1rem);
 }
 
 .info__container .info span.address {
@@ -268,12 +310,20 @@ section {
     text-align: left;
 }
 
+.more_info__container {
+    text-align: left;
+    width: 30%;
+    font-weight: 100;
+    line-height: 1rem;
+    font-size: clamp(0.2rem, 2vw + 0.2rem, 0.8rem);
+}
+
 @media (max-width: 32rem) {
     .container.onde__estamos {
-        gap: 1rem;
+        gap: 2rem;
     }
-    .more_info__container {
-        display: none;
+    .map_container {
+        width: 100%;
     }
     .onde__estamos--item {
         justify-content: flex-start;
@@ -282,6 +332,7 @@ section {
     }
     .onde__estamos--item.middle {
         justify-content: flex-end;
+        flex-direction: column-reverse;
     }
     .info_text br {
         display: none;
@@ -289,22 +340,18 @@ section {
     .info__container .info {
         justify-content: flex-start;
     }
-    .map {
-        width: 100%;
-        height: 5rem;
-    }
     .icon__dow {
         bottom: 15px;
+    }
+    .onde__estamos--item_header, .onde__estamos--item_header.middle {
+        text-align: center;
+    }
+    .more_info__container {
+        width: 100%;
     }
 }
 
 @media (max-width: 25rem) {
-    .container.onde__estamos {
-        gap: 1rem;
-    }
-    .more_info__container {
-        display: none;
-    }
     .onde__estamos--item {
         justify-content: flex-start;
         gap: 1rem;
