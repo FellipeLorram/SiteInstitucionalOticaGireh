@@ -1,6 +1,8 @@
+
 window.addEventListener('scroll', () => {
     const iconDow = document.querySelector('.icon__dow a')
     iconDow.classList.toggle('hide', window.scrollY > 300);
+    navBar.classList.toggle('sticky', window.scrollY > 1268 && window.scrollY < 2700)
 });
 
 // Criando as cenas de animação
@@ -50,35 +52,42 @@ const intervalAnimation = setInterval(() => {
     }
 }, 500)
 
-const quemSomosText = ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi natus quidem minima cupiditate architecto
-assumenda excepturi omnis saepe aspernatur recusandae perspiciatis nihil, voluptate dolor adipisci,
-animi
-non ipsum provident rem.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quos impedit debitis exercitationem
-explicabo soluta voluptas esse optio earum inventore nulla nihil dolore veritatis dolorem porro
-deserunt, eius incidunt at.`
+const quemSomosText = `Desde de 2009, a <span class="blue__text">Ótica Girêh</span> é especializada em atendimento, 
+buscando sempre conhecer, nos mínimos detalhes, <span class="red__text">a sua necessidade visual</span>, em busca de oferecer o que há de <span class="red__text">melhor</span>
+no mercado ótico a <span class="red__text">preços que cabem no seu bolso. </span> <br>
+<br>
+A <span class="blue__text">Ótica Girêh</span> conta com três unidades em pontos estratégicos, onde pode reduzir custos e conseguentemente, 
+<span class="red__text">reduzir os preços de seus produtos.</span>
+`
+
 let quemSomosTextIndex = 0;
 let quemSomosTextLetter = '';
 
 const sections = document.querySelectorAll('section');
 const quemSomosTextContainer = document.querySelector('.quem__somos p')
-
-
+const navBar = document.querySelector('.nav__bar');
 
 const observer = new IntersectionObserver(
     (entries) => {
         const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
+
         if (visibleSection && visibleSection.target.id === 'QuemSomos') {
             setInterval(() => {
                 quemSomosTextLetter = quemSomosText.slice(0, ++quemSomosTextIndex);
+                quemSomosTextContainer.innerHTML = quemSomosTextLetter;
 
-                quemSomosTextContainer.textContent = quemSomosTextLetter;
+            }, 2);
+        }
 
-            }, 5);
-
+        if (visibleSection && visibleSection.target.id === 'produtos') {
+            navBar.style.opacity = 0;
+            navBar.style.zIndex = -10;
+        } else {
+            navBar.style.zIndex = 2;
+            navBar.style.opacity = 1;
         }
     },
-    { threshold: 0.5 }
+    { threshold: 0.7 }
 );
 
 setInterval(() => {
@@ -123,3 +132,56 @@ function initMap() {
 
 }
 
+// Ver mais 
+const VerMaisArmacoes = {
+    open() {
+        const html = `
+        <section class="ver_mais_container">
+            <div class="close">
+                <span class="material-icons-outlined">close</span>
+            </div>
+            <div class="container">
+                <div class="informative_text">
+                    <p>
+                        Todas as nossas armações são em materiais selecionados, como Acetato comun, Acetato mazzucchelli, Aluminio, Metal <br>
+                        Não trabalhamos com materias de brinquedo, como o plastico por exemplo.
+                    </p>
+                </div>
+                <div class="ver_mais_content">
+                    <div class="foto_holder">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                </div>
+        </section>
+        `;
+
+        const template = document.createElement("template");
+        template.innerHTML = html;
+
+
+        const windownContainer = template.content.querySelector(".ver_mais_container");
+        const btnClose = template.content.querySelector(".close span");
+        console.log(btnClose)
+        btnClose.addEventListener('click', () => {
+            this._close(windownContainer);
+        });
+
+        document.body.appendChild(template.content);
+        document.body.classList.add('stop-scrolling');
+    },
+
+    _close(windownContainer) {
+        windownContainer.classList.add('confirm-close');
+
+        windownContainer.addEventListener('animationend', () => {
+            document.body.removeChild(windownContainer)
+            document.body.classList.remove('stop-scrolling')
+        })
+    },
+}
+
+const produtosItens = document.querySelectorAll('.produtos_info_container--item');
+produtosItens.forEach(item => item.addEventListener('click', e => {
+    if (e.target.dataset.to === 'Armacoes') VerMaisArmacoes.open()
+}));
