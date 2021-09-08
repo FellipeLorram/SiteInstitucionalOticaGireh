@@ -2,7 +2,7 @@
 window.addEventListener('scroll', () => {
     const iconDow = document.querySelector('.icon__dow a')
     iconDow.classList.toggle('hide', window.scrollY > 300);
-    navBar.classList.toggle('sticky', window.scrollY > 1268 && window.scrollY < 2700)
+
 });
 
 // Criando as cenas de animação
