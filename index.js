@@ -143,7 +143,7 @@ const VerMaisArmacoes = {
             <div class="container">
                 <div class="informative_text">
                     <p>
-                        Todas as nossas armações são em materiais selecionados, como Acetato comun, Acetato mazzucchelli, Aluminio, Metal <br>
+                        Contamos com um grande acervo de armações e todas essas são em materiais selecionados, como Acetato comum, Acetato mazzucchelli, Aluminio, Metal <br>
                         Não trabalhamos com materias de brinquedo, como o plastico por exemplo.
                     </p>
                 </div>
