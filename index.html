@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
@@ -21,6 +20,9 @@
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/index.css">
+
     <title>Ótica Girêh</title>
 </head>
 
@@ -81,7 +83,8 @@
                     <div class="info__container">
                         <div class="info">
                             <span class="material-icons-outlined">whatsapp</span>
-                            <a href="https://api.whatsapp.com/send?phone=5521965657508" class="info_text">(21)96565-7508</a>
+                            <a href="https://api.whatsapp.com/send?phone=5521965657508"
+                                class="info_text">(21)96565-7508</a>
                         </div>
                         <div class="info">
                             <span class="material-icons-outlined">phone</span>
@@ -114,7 +117,8 @@
                     <div class="info__container">
                         <div class="info">
                             <span class="material-icons-outlined">whatsapp</span>
-                            <a href="https://api.whatsapp.com/send?phone=5521981950372" class="info_text">(21)98195-0372</a>
+                            <a href="https://api.whatsapp.com/send?phone=5521981950372"
+                                class="info_text">(21)98195-0372</a>
                         </div>
                         <div class="info">
                             <span class="material-icons-outlined">phone</span>
@@ -173,7 +177,8 @@
 
     <section id="nossaHistoria">
         <div class="container nossa_historia">
-            <p> Historia da otica Historia da otica  Historia da otica Historia da otica  Historia da otica Historia da otica  Historia da otica Historia da otica 
+            <p> Historia da otica Historia da otica Historia da otica Historia da otica Historia da otica Historia da
+                otica Historia da otica Historia da otica
                 <span class="ver_mais_text">Ver mais.</span>
             </p>
         </div>
@@ -185,23 +190,25 @@
             <h1>Produtos e informações úteis</h1>
             <div class="produtos_info_container">
                 <div data-to="Lentes" class="produtos_info_container--item">
-                    <span class="item_text">Lentes</span>
-                    <span class="material-icons-outlined">add</span>
+                    <span data-to="Lentes" class="item_text">Lentes</span>
+                    <span data-to="Lentes" class="material-icons-outlined">add</span>
                 </div>
                 <div data-to="Armacoes" class="produtos_info_container--item">
-                    <span class="item_text">Armações</span>
-                    <span class="material-icons-outlined">add</span>
+                    <span data-to="Armacoes" class="item_text">Armações</span>
+                    <span data-to="Armacoes" class="material-icons-outlined">add</span>
                 </div>
                 <div data-to="Perguntas" class="produtos_info_container--item">
-                    <span class="item_text">Perguntas frequentes</span>
-                    <span class="material-icons-outlined">add</span>
+                    <span data-to="Perguntas" class="item_text">Perguntas frequentes</span>
+                    <span data-to="Perguntas" class="material-icons-outlined">add</span>
                 </div>
             </div>
         </div>
     </section>
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8OyKEhDjxPRd55JI5e25NvPFYwfa3AUk&callback=initMap"></script>
-    <script src="index.js"></script>
+
+
+
+
+    <script type="module" src="./code/index.js"></script>
 </body>
 
 </html>
