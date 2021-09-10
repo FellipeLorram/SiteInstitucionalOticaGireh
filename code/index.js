@@ -1,5 +1,6 @@
 import { VerMaisArmacoes } from './verMais.js';
 
+// Maps
 var script = document.createElement('script');
 script.src =
     'https://maps.googleapis.com/maps/api/js?libraries=places,visualization&key=AIzaSyB8OyKEhDjxPRd55JI5e25NvPFYwfa3AUk&v=weekly&callback=initMap';
@@ -44,6 +45,7 @@ window.addEventListener('scroll', () => {
     const iconDow = document.querySelector('.icon__dow a')
     iconDow.classList.toggle('hide', window.scrollY > 300);
 });
+
 
 // Criando as cenas de animação
 
@@ -134,11 +136,21 @@ setInterval(() => {
     sections.forEach((section) => observer.observe(section));
 }, 500)
 
-// Maps
-
 
 // Ver mais 
 const produtosItens = document.querySelectorAll('.produtos_info_container--item');
 produtosItens.forEach(item => item.addEventListener('click', e => {
-    if (e.target.dataset.to === 'Armacoes') VerMaisArmacoes.open();
+    if (e.target.dataset.to === 'Armacoes') {
+        VerMaisArmacoes.open();
+        document.querySelector('#produtos').classList.remove('animation_section_produtos--backwards');
+        document.querySelector('#produtos').classList.add('animation_section_produtos')
+    }
 }));
+
+//Toggle Nav Bar
+
+document.querySelector('.nav__bar--toggle').addEventListener('click', e => {
+    if (e.target.classList.contains('nav__bar--toggle')) e.target.classList.toggle('close');
+    else e.target.parentElement.classList.toggle('close')
+    
+});
