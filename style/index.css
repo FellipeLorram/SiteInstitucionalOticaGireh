@@ -685,10 +685,114 @@ section {
     color: #89c017;
     font-style: italic;
     padding: 0.25rem 0.5rem;
-    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+    font-size: clamp(1rem, 1vw + 1rem, 1rem);
+}
+
+/* ----------------- filters ---------------*/
+
+.filters_windown_container {
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    color: white;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    animation: niceAppear 0.3s ease-in-out forwards;
+}
+
+.filters {
+    background: black;
+    padding: 0.5rem;
+    max-width: 80%;
+    width: 500px;
+    border: 0.5px solid white;
+}
+
+.filters_header {
+    width: 100%;
+}
+
+.filters_header span {
+    cursor: pointer;
+}
+
+.filters_body {
+    padding: 0.5rem;
+}
+
+.mas_fem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.mas_fem div, .marcas--footer button {
+    padding: 0.5em;
+    margin: 0 0.5em;
+    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
+    border: 0.5px solid white;
+    cursor: pointer;
+    background: black;
+    transition: all 0.2s ease;
+}
+
+.marcas--footer button {
+    color: white;
+    margin: 0;
+}
+
+.mas_fem div:hover, .marca:hover, .marcas--footer button:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.marcas__container {
+    width: 100%;
+    padding: 0.5em;
+}
+
+.marcas--header, .marcas--footer {
+    width: 100%;
+    text-align: left;
+    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
+    border-bottom: 0.5px solid white;
+    padding: 0 0 0.2rem 0;
+}
+
+.marcas--footer {
+    border-bottom: none;
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.marcas-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    padding: 1em 0.5em;
+}
+
+.marca {
+    border: 0.5px solid white;
+    padding: 0.5em;
+    font-size: clamp(0.2rem, 2vw + 0.2rem, 1rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.confirm-close--filters {
+    animation: niceDisappear 0.4s ease-in-out forwards;
 }
 
 @media (max-width: 32rem) {
+    .icons_side_container {
+        opacity: 0;
+    }
     .sticky {
         background: rgba(255, 255, 255, 0.8);
         color: black;
@@ -910,6 +1014,23 @@ section {
     }
     to {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes niceDisappear {
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes niceAppear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
         opacity: 1;
     }
 }
