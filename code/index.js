@@ -125,9 +125,14 @@ const observer = new IntersectionObserver(
             navBar.style.opacity = 0;
             navBar.style.zIndex = -10;
         } else {
-            navBar.style.zIndex = 2;
+            navBar.style.zIndex = 4;
             navBar.style.opacity = 1;
         }
+
+        document.querySelectorAll('.nav__menu_items a').forEach(link => {
+            if (visibleSection && link.dataset.href === visibleSection.target.id) link.style.display = 'none';
+            else link.style.display = 'initial';
+        });
     },
     { threshold: 0.7 }
 );
@@ -148,9 +153,22 @@ produtosItens.forEach(item => item.addEventListener('click', e => {
 }));
 
 //Toggle Nav Bar
+const navToogle = document.querySelector('.nav__bar--toggle');
+const navMenu = document.querySelector('.nav__menu');
+document.querySelectorAll('.nav__menu_items a').forEach(link => link.addEventListener('click', () => {
+    navToogle.classList.toggle('close');
 
-document.querySelector('.nav__bar--toggle').addEventListener('click', e => {
+    if (navToogle.classList.contains('close')) navMenu.classList.add('active');
+    else navMenu.classList.remove('active')
+}));
+
+navToogle.addEventListener('click', e => {
     if (e.target.classList.contains('nav__bar--toggle')) e.target.classList.toggle('close');
     else e.target.parentElement.classList.toggle('close')
-    
+
+    if (navToogle.classList.contains('close')) navMenu.classList.add('active');
+    else navMenu.classList.remove('active')
 });
+
+
+
