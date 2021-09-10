@@ -148,7 +148,7 @@ produtosItens.forEach(item => item.addEventListener('click', e => {
     if (e.target.dataset.to === 'Armacoes') {
         VerMaisArmacoes.open();
         document.querySelector('#produtos').classList.remove('animation_section_produtos--backwards');
-        document.querySelector('#produtos').classList.add('animation_section_produtos')
+        document.querySelector('#produtos').classList.add('animation_section_produtos');
     }
 }));
 
@@ -169,6 +169,3 @@ navToogle.addEventListener('click', e => {
     if (navToogle.classList.contains('close')) navMenu.classList.add('active');
     else navMenu.classList.remove('active')
 });
-
-
-
