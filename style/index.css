@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 :root {
     --red-color: rgb(255, 131, 131);
     --main-font: 'Glory', sans-serif;
@@ -33,8 +34,10 @@ body {
     position: absolute;
     height: 100vh;
     width: 100%;
-    z-index: 3;
+    z-index: 5;
     color: white;
+    top: 0;
+    left: 0;
 }
 
 .icon__conatainer h1 {
@@ -66,7 +69,7 @@ body {
     justify-content: center;
     width: 100vw;
     color: white;
-    z-index: 2;
+    z-index: 4;
     position: fixed;
     transition: all 0.3s ease;
 }
@@ -98,7 +101,6 @@ body {
     justify-content: space-between;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 0.5em;
     width: 5%;
     min-width: 2rem;
     cursor: pointer;
@@ -107,7 +109,7 @@ body {
 .nav__bar--toggle span {
     border: 1px solid white;
     width: 100%;
-    transition: all 0.4s ease-in;
+    transition: all 0.3s ease-in;
 }
 
 .nav__bar--toggle.close span:nth-child(1) {
@@ -115,7 +117,7 @@ body {
 }
 
 .nav__bar--toggle.close span:nth-child(2) {
-    transform: rotate(-45deg) translateY(-300%);
+    transform: rotate(-45deg) translateY(-400%);
 }
 
 .nav__bar--toggle.close span:nth-child(3) {
@@ -124,6 +126,44 @@ body {
 
 .nav__bar--toggle:hover span {
     animation: linear__color_borded 2s linear infinite;
+}
+
+.nav__menu {
+    width: 50vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -3;
+    background: black;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .5);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__menu.active {
+    z-index: 2;
+    opacity: 1;
+}
+
+.nav__menu_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+}
+
+.nav__menu--item {
+    color: white;
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 section {
@@ -361,7 +401,7 @@ section {
     position: relative;
     text-align: left;
     font-weight: 100;
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 .ver_mais_text {
@@ -700,6 +740,9 @@ section {
     }
     .ver_mais_content {
         grid-template-columns: 1fr;
+    }
+    .nav__menu {
+        width: 100vw;
     }
 }
 
