@@ -1,3 +1,5 @@
+import { FilterOptions } from "./filterOption.js";
+
 export const VerMaisArmacoes = {
     open() {
         const html = `
@@ -38,7 +40,7 @@ export const VerMaisArmacoes = {
                     </div>
                     <div class="img_info">
                         <p>Armação em acetato Lacoste.</p>
-                        <p class="price">R$280</p>
+                        <p class="price">A partir de R$280</p>
                     </div>
                 </div>
                 <div class="foto_holder">
@@ -48,7 +50,7 @@ export const VerMaisArmacoes = {
                     </div>
                     <div class="img_info">
                         <p>Armação em acetato Vogue.</p>
-                        <p class="price">R$320</p>
+                        <p class="price">A partir de R$320</p>
                     </div>
                 </div>
             </div>
@@ -62,7 +64,12 @@ export const VerMaisArmacoes = {
 
         const windownContainer = template.content.querySelector(".ver_mais_container");
         const btnClose = template.content.querySelector("#btn_close");
+        const btnFilter = template.content.querySelector(".filter__button_container");
         const btnCloseInformativeText = template.content.querySelector(".informative_text--close");
+
+        btnFilter.addEventListener('click', () => {
+            FilterOptions.open();
+        });
 
         btnClose.addEventListener('click', () => {
             this._close(windownContainer);
@@ -74,15 +81,15 @@ export const VerMaisArmacoes = {
 
         document.body.appendChild(template.content);
         document.body.classList.add('stop-scrolling');
-       
+
     },
 
     _close(windownContainer) {
         windownContainer.classList.add('confirm-close');
 
         windownContainer.addEventListener('animationend', () => {
-            document.body.removeChild(windownContainer)
-            document.body.classList.remove('stop-scrolling')
+            document.body.removeChild(windownContainer);
+            document.body.classList.remove('stop-scrolling');
         })
     },
 }
