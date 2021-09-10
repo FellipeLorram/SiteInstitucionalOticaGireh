@@ -3,7 +3,7 @@ export const VerMaisArmacoes = {
         const html = `
         <section class="ver_mais_container">
         <div class="ver_mais_container--header">
-            <span id="btn_close" class="material-icons-outlined">close</span>
+            <span id="btn_close" class="material-icons-outlined">arrow_back_ios</span>
             <div class="filter__button_container">
                 <div class="filter__button">
                     <span class="material-icons-outlined">filter_alt</span>
@@ -42,13 +42,13 @@ export const VerMaisArmacoes = {
                     </div>
                 </div>
                 <div class="foto_holder">
-                    <img src="./style/images/IMG_20210414_095209.jpg" alt="armacao lacoste">
+                    <img src="./style/images/IMG_20210414_095209.jpg" alt="armacao vogue">
                     <div class="img_from">
                         <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
                     </div>
                     <div class="img_info">
-                        <p>Armação em acetato Lacoste.</p>
-                        <p class="price">R$280</p>
+                        <p>Armação em acetato Vogue.</p>
+                        <p class="price">R$320</p>
                     </div>
                 </div>
             </div>
@@ -66,12 +66,15 @@ export const VerMaisArmacoes = {
 
         btnClose.addEventListener('click', () => {
             this._close(windownContainer);
+            document.querySelector('#produtos').classList.remove('animation_section_produtos');
+            document.querySelector('#produtos').classList.add('animation_section_produtos--backwards');
         });
 
         btnCloseInformativeText.addEventListener('click', () => document.querySelector('.informative_text').style.display = 'none');
 
         document.body.appendChild(template.content);
         document.body.classList.add('stop-scrolling');
+       
     },
 
     _close(windownContainer) {
