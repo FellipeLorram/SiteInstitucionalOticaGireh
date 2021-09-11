@@ -33,7 +33,7 @@ export const VerMaisArmacoes = {
             </div>
             
             <div class="ver_mais_content">
-                <div class="foto_holder">
+                <div data-marca="Lacoste" data-sex="masc" class="foto_holder">
                     <img src="./style/images/IMG_20210414_095209.jpg" alt="armacao lacoste">
                     <div class="img_from">
                         <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
@@ -43,14 +43,14 @@ export const VerMaisArmacoes = {
                         <p class="price">A partir de R$280</p>
                     </div>
                 </div>
-                <div class="foto_holder">
-                    <img src="./style/images/IMG_20210414_095209.jpg" alt="armacao vogue">
+                <div data-marca="Fridon" data-sex="masc" class="foto_holder">
+                    <img src="./style/images/IMG_20210414_094740.jpg" alt="armacao fridon">
                     <div class="img_from">
                         <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
                     </div>
                     <div class="img_info">
-                        <p>Armação em acetato Vogue.</p>
-                        <p class="price">A partir de R$320</p>
+                        <p>Armação em acetato Fridon.</p>
+                        <p class="price">A partir de R$220</p>
                     </div>
                 </div>
             </div>
