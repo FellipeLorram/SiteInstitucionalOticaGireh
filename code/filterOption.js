@@ -82,7 +82,6 @@ export const FilterOptions = {
 
         windownContainer.addEventListener('animationend', () => {
             document.body.removeChild(windownContainer);
-            document.body.classList.remove('stop-scrolling');
         })
     },
 
