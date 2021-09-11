@@ -701,15 +701,22 @@ section {
     left: 0;
     align-items: center;
     justify-content: center;
-    animation: niceAppear 0.3s ease-in-out forwards;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.confirm-close--filters {
+    background: none;
+    animation: niceDisappear 0.4s ease-in-out forwards;
 }
 
 .filters {
     background: black;
     padding: 0.5rem;
-    max-width: 80%;
+    max-width: 90%;
     width: 500px;
     border: 0.5px solid white;
+    animation: niceAppear 0.3s ease-in-out forwards;
+    transition: all 0.3s ease-in-out;
 }
 
 .filters_header {
@@ -718,10 +725,6 @@ section {
 
 .filters_header span {
     cursor: pointer;
-}
-
-.filters_body {
-    padding: 0.5rem;
 }
 
 .mas_fem {
@@ -739,6 +742,16 @@ section {
     cursor: pointer;
     background: black;
     transition: all 0.2s ease;
+}
+
+.mas_fem div.selected {
+    background: white;
+    border: 1px solid gray;
+    color: black;
+}
+
+.mas_fem div.selected:hover {
+    background: rgba(255, 255, 255, .9);
 }
 
 .marcas--footer button {
@@ -774,19 +787,24 @@ section {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 0.5rem;
-    padding: 1em 0.5em;
+    padding: 1em 0;
 }
 
 .marca {
     border: 0.5px solid white;
-    padding: 0.5em;
-    font-size: clamp(0.2rem, 2vw + 0.2rem, 1rem);
+    padding: 1rem;
+    font-size: clamp(0.2rem, 2.5vw + 0.2rem, 1rem);
     cursor: pointer;
     transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.confirm-close--filters {
-    animation: niceDisappear 0.4s ease-in-out forwards;
+.marca.selected {
+    background: white;
+    border: 1px solid black;
+    color: black;
 }
 
 @media (max-width: 32rem) {
@@ -1024,6 +1042,7 @@ section {
         opacity: 0;
     }
 }
+
 @keyframes niceAppear {
     from {
         transform: scale(0);
