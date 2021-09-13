@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -156,6 +157,12 @@ body {
     flex-direction: column;
     gap: 2rem;
     width: 80%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0.3s;
+}
+
+.nav__menu.active .nav__menu_items {
+    opacity: 1;
 }
 
 .nav__menu--item {
@@ -187,6 +194,7 @@ section {
     justify-content: center;
     flex-direction: column;
     transition: filter 0.5s ease;
+    overflow-x: hidden;
 }
 
 .container.blurred {
@@ -807,6 +815,75 @@ section {
     color: black;
 }
 
+/* ----------------- LENTES SECTION ---------------*/
+
+.ver_mais_container.lentes .container {
+    align-items: flex-start;
+    max-width: 50rem;
+    gap: 3rem;
+}
+
+.header--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: clamp(1rem, 2vw + 1.6rem, 4rem);
+}
+
+.header--text.min {
+    font-size: clamp(1rem, 2vw + 1rem, 4rem);
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 .5rem 0;
+    cursor: pointer;
+    transform: translateX(1000%);
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+    border-bottom: 0.1px solid rgba(255, 255, 255, .2);
+    animation: rightTocenter 0.2s ease-in-out 0.1s forwards;
+}
+
+.container.questionContent {
+    display: block;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    text-align: left;
+    max-width: 50rem;
+}
+
+.container.questionContent p {
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.container.questionContent h1 {
+    font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
+    margin-bottom: 1rem;
+}
+
+.question:nth-child(2) {
+    animation: rightTocenter 0.2s ease-in-out 0.2s forwards;
+}
+
+.question:nth-child(3) {
+    animation: rightTocenter 0.2s ease-in-out 0.3s forwards;
+}
+
+.question:nth-child(4) {
+    animation: rightTocenter 0.2s ease-in-out 0.4s forwards;
+}
+
+.question .material-icons-outlined {
+    font-style: italic;
+    font-weight: 100;
+}
+
 @media (max-width: 32rem) {
     .icons_side_container {
         opacity: 0;
@@ -858,7 +935,7 @@ section {
         width: 100%;
     }
     .ver_mais_container--header {
-        padding: 1rem;
+        padding: 1rem 0.5rem;
     }
     .ver_mais_content {
         grid-template-columns: 1fr;
@@ -989,6 +1066,15 @@ section {
     }
     to {
         transform: translateX(-100%);
+    }
+}
+
+@keyframes rightTocenter {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
     }
 }
 
