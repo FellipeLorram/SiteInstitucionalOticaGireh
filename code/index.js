@@ -1,5 +1,6 @@
 import { VerMaisArmacoes } from './Armacoes/ArmacoesSection.js';
 import { VerMaisLentes } from './Lentes/LentesSection.js'
+import { NossaHistoria } from './nossaHistoria.js';
 import { VerMaisPerguntasFrequentes } from './Perguntas Frequentes/PerguntasFrequenteSection.js';
 
 // Maps
@@ -163,6 +164,12 @@ produtosItens.forEach(item => item.addEventListener('click', e => {
         document.querySelector('#produtos').classList.add('animation_section_produtos');
     }
 }));
+
+document.querySelector('.ver_mais_text').addEventListener('click', () => {
+    NossaHistoria.open()
+    document.querySelector('#nossaHistoria').classList.remove('animation_section_produtos--backwards');
+    document.querySelector('#nossaHistoria').classList.add('animation_section_produtos');
+})
 
 //Toggle Nav Bar
 const navToogle = document.querySelector('.nav__bar--toggle');
