@@ -34,7 +34,7 @@ export const VerMaisArmacoes = {
             
             <div class="ver_mais_content">
                 <div data-marca="Lacoste" data-sex="masc" class="foto_holder">
-                    <img src="./style/images/IMG_20210414_095209.jpg" alt="armacao lacoste">
+                    <img src="./code/Armacoes/images/lacostePretaAberta.jpg" alt="armacao lacoste">
                     <div class="img_from">
                         <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
                     </div>
@@ -44,13 +44,153 @@ export const VerMaisArmacoes = {
                     </div>
                 </div>
                 <div data-marca="Fridon" data-sex="masc" class="foto_holder">
-                    <img src="./style/images/IMG_20210414_094740.jpg" alt="armacao fridon">
+                    <img src="./code/Armacoes/images/fridonAzulVermelhaAcetato.jpg" alt="armacao fridon">
                     <div class="img_from">
                         <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
                     </div>
                     <div class="img_info">
                         <p>Armação em acetato Fridon.</p>
                         <p class="price">A partir de R$220</p>
+                    </div>
+                </div>
+                <div data-marca="Ana Hickmann" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/AnaMetalFechadoBranca.jpeg" alt="armacao Metal Fechado Branca">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em metal Ana Hickmann.</p>
+                        <p class="price">A partir de R$220</p>
+                    </div>
+                </div>
+                <div data-marca="Channel" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/ChanelMarromTransparente.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em acetato Channel.</p>
+                        <p class="price">A partir de R$280</p>
+                    </div>
+                </div>
+                <div data-marca="Ana Hickmann" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/AnaMetalFechadoPreta.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em metal Ana Hickmann.</p>
+                        <p class="price">A partir de R$250</p>
+                    </div>
+                </div>
+                <div data-marca="Dolce Gabbana" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/DGmarronAcetato.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em acetato Dolce & Gabbana.</p>
+                        <p class="price">A partir de R$280</p>
+                    </div>
+                </div>
+                <div data-marca="Dulcet" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/Dulcet1.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em acetato Dulcet.</p>
+                        <p class="price">A partir de R$180</p>
+                    </div>
+                </div>
+                <div data-marca="Dulcet" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/DulcetTransparente.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em acetato Dulcet.</p>
+                        <p class="price">A partir de R$180</p>
+                    </div>
+                </div>
+                <div data-marca="Oakley" data-sex="masc" class="foto_holder">
+                    <img src="./code/Armacoes/images/oakleyAbertaPreta.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em metal Oakley.</p>
+                        <p class="price">A partir de R$240</p>
+                    </div>
+                </div>
+                <div data-marca="Dulcet" data-sex="masc" class="foto_holder">
+                    <img src="./code/Armacoes/images/DulcetRedondaAzul.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em acetato Dulcet.</p>
+                        <p class="price">A partir de R$180</p>
+                    </div>
+                </div>
+                <div data-marca="Oakley" data-sex="masc" class="foto_holder">
+                    <img src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em metal Oakley.</p>
+                        <p class="price">A partir de R$240</p>
+                    </div>
+                </div>
+                <div data-marca="Ray Ban" data-sex="masc" class="foto_holder">
+                    <img src="./code/Armacoes/images/raybanHexagonal.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Ray-Ban Hexagonal.</p>
+                        <p class="price">A partir de R$240</p>
+                    </div>
+                </div>
+                <div data-marca="Oakley" data-sex="masc" class="foto_holder">
+                    <img src="./code/Armacoes/images/oakleyAbertaPVerde.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em metal Oakley.</p>
+                        <p class="price">A partir de R$240</p>
+                    </div>
+                </div>
+                <div data-marca="Oakley" data-sex="masc" class="foto_holder">
+                    <img src="./code/Armacoes/images/oakleyAbertaPRosa.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em metal Oakley.</p>
+                        <p class="price">A partir de R$240</p>
+                    </div>
+                </div>
+                <div data-marca="Dulcet" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/DulcetTransparenteRedonda.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em acetato Dulcet.</p>
+                        <p class="price">A partir de R$180</p>
+                    </div>
+                </div>
+                <div data-marca="Ana Hickmann" data-sex="fem" class="foto_holder">
+                    <img src="./code/Armacoes/images/AnaMetalFechadoPreta.jpeg" alt="armacao">
+                    <div class="img_from">
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </div>
+                    <div class="img_info">
+                        <p>Armação em metal Ana Hickmann.</p>
+                        <p class="price">A partir de R$250</p>
                     </div>
                 </div>
             </div>
