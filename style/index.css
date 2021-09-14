@@ -12,13 +12,13 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
     font-size: 62.5%;
     background: black;
     font-family: var(--main-font);
+    overflow-x: hidden;
 }
 
 .stop-scrolling {
@@ -194,7 +194,6 @@ section {
     justify-content: center;
     flex-direction: column;
     transition: filter 0.5s ease;
-    overflow-x: hidden;
 }
 
 .container.blurred {
@@ -500,7 +499,7 @@ section {
 .ver_mais_container {
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 3000;
     top: 0;
     left: 0;
     right: 0;
@@ -701,7 +700,7 @@ section {
 .filters_windown_container {
     height: 100vh;
     width: 100%;
-    z-index: 10;
+    z-index: 1000000;
     position: fixed;
     color: white;
     display: flex;
@@ -935,7 +934,7 @@ section {
         width: 100%;
     }
     .ver_mais_container--header {
-        padding: 1rem 0.5rem;
+        padding: 0.5rem;
     }
     .ver_mais_content {
         grid-template-columns: 1fr;
