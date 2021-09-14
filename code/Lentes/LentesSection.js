@@ -52,30 +52,7 @@ export const VerMaisLentes = {
         questions.forEach(question => question.addEventListener('click', () => {
 
             if (question.dataset.to === 'boaLente') {
-                Question.open('Como escolher uma boa lente?', `
-                    <p>
-                        Um material adequado, tratamentos que combinem com seu dia a dia e com estilo da sua armação, são umas das características de uma boa lente.
-                    </p>
-                    
-                    <h1>O Material Adequado</h1>
-                    <p>Cada armação pede um tipo de material de lente.</p>
-                    <p> 
-                        <b>Armações Abertas (Aquelas em que as lentes não ficam totalmente involtas pela armação) e Armações balgriff:</b><br><br>
-                        Por esse tipo de armação não proteger totalmente a lente, o material adequado seria o mais resistente possível, como o policarbonato,
-                        resina 1.61, resina 1.67.<br><br>
-                        
-                        Armações abertas geralmente seguram as lentes com a ajuda de um fio de nylon. Um friso é feito involta de toda a lente, onde passa o 
-                        nylon. Para aguentar esse friso, a lente precisa ser bastante resistente, pois se não, corre-se o risco de quebrar na hora da montagem.<br><br>
-                        Já as Armações balgriff, seguram a lente através de parafusos furados na lentes...
-                    </p>
-                    <p>
-                        <b>Armações fechadas:</b><br>
-                        Esse tipo de armação suporta todos os materiais de lente. Por serem totalmente fechadas, essas armações oferecem toda a proteção para as lentes.
-                    </p>
-                    
-                    
-                    <h1>O Tratamento para você</h1>
-                `);
+                Question.open('Como escolher uma boa lente?', this._BoaLente());
             }
 
             if (question.dataset.to === 'MateriaisLente') {
@@ -102,4 +79,61 @@ export const VerMaisLentes = {
             document.body.classList.remove('stop-scrolling');
         })
     },
+
+    _BoaLente() {
+        return `
+            <p>Um material adequado, 
+            tratamentos que combinem com seu dia a dia e com estilo da sua armação, 
+            são características de uma boa lente.</p>
+                        
+            <h1>O Material Adequado</h1>
+            <p>Cada armação pede um tipo de material de lente.</p>
+            <p> 
+            <b>Armações Abertas e Armações balgriff:</b><br><br>
+            Por esse tipo de armação não proteger totalmente a lente, o material adequado seria o mais resistente possível, como o policarbonato,
+            resina 1.61, resina 1.67.<br><br>
+                            
+            Armações abertas geralmente seguram as lentes com a ajuda de um fio de nylon. Um friso é feito em volta de toda a lente, onde passa o 
+            nylon. Para aguentar esse friso, a lente precisa ser bastante resistente, pois se não, corre-se o risco de quebrar na hora da montagem.<br><br>
+            </p> 
+            <div class="img_container_lentes_section">
+                <span>Armação Aberta</span>
+                <img class="img_lentes_section" src="./code/Armacoes/images/oakleyAbertaPRosa.jpeg" alt="armacao"><br>
+            </div>
+            <p> 
+            Já as Armações balgriff, 
+            seguram a lente através de parafusos fixados na própia lente, 
+            causando assim a necessidade da sua resistência.
+            </p>
+            <div class="img_container_lentes_section">
+                <span>Armação Balgriff</span>
+                <img class="img_lentes_section" src="./code/Armacoes/images/oakleyAbertaPRosa.jpeg" alt="armacao"><br>
+            </div>
+            <p><b>Armações fechadas:</b><br><br>
+            Esse tipo de armação suporta todos os materiais de lente. 
+            Por serem totalmente fechadas, essas armações oferecem uma proteção a mais para a lente, já que as mesmas não correm o risco de 
+            acabarem batendo, ou esbarrando suas bordas. <br><br>
+            
+            Lentes em resina comum (1.56) são as mais utilizadas nos casos de armações fechadas. <br><br>Existem outros fatores, como o 
+            seu grau em relação ao tamanho de sua armação, que alterariam o tipo de sua lente. 
+
+            </p>
+            <div class="img_container_lentes_section b">
+                <div class="img">
+                <img class="img_lentes_section" src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
+                <p>Armação aberta em metal</p>
+                </div>
+                <div class="img">
+                <img class="img_lentes_section" src="./code/Armacoes/images/DulcetRedondaAzul.jpeg" alt="armacao">
+                <p>Armação aberta em acetato</p>
+                </div>
+            </div>
+            
+            <p>
+                Caso você tenha um grau alto de miopia, por exemplo
+            </p>
+                        
+            <h1>O Tratamento para você</h1>
+        `;
+    }
 }
