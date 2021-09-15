@@ -891,39 +891,26 @@ section {
     justify-content: space-between;
     margin-bottom: 2rem;
     position: relative;
-}
-
-.img_container_lentes_section.b {
     gap: 0.5rem;
-}
-
-.img_container_lentes_section span {
-    position: absolute;
-    margin: 0 auto;
-    top: 0;
-    color: white;
-    font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
-    color: black;
-}
-
-.img_container_lentes_section span.b {
-    color: black;
-    bottom: 0;
-    right: 0;
 }
 
 .img_container_lentes_section .img p {
     margin: 0;
-    color: black;
+    color: white;
+    font-size: clamp(1rem, 1vw + 1rem, 1rem);
 }
 .img{
     padding: 0.2rem;
-    background: white;
+    background: black;
+    border: 0.5px solid rgba(255, 255, 255, .5);
 }
 
 .img_lentes_section {
     max-width: 100%;
     max-height: 400px;
+}
+.minor_text{
+    font-size: clamp(1rem, 1vw + 1rem, 1rem);
 }
 
 @media (max-width: 32rem) {
@@ -984,9 +971,6 @@ section {
     }
     .nav__menu {
         width: 100vw;
-    }
-    .img_container_lentes_section.b {
-        flex-direction: column;
     }
     .img_container_lentes_section span.b {
         color: black;
