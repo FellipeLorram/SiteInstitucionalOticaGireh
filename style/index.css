@@ -1,1177 +1,169 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-:root {
-    --red-color: rgb(255, 131, 131);
-    --main-font: 'Glory', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-size: 62.5%;
-    background: black;
-    font-family: var(--main-font);
-    overflow-x: hidden;
-}
-
-.stop-scrolling {
-    height: 100%;
-    overflow: hidden;
-}
-
-.icon__conatainer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 1rem;
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    z-index: 5;
-    color: white;
-    top: 0;
-    left: 0;
-}
-
-.icon__conatainer h1 {
-    font-size: clamp(0.5rem, 3vw + 0.5rem, 1.5rem);
-    animation: blinking_text 1.4s linear infinite;
-}
-
-.icon {
-    margin: 3rem;
-    color: #ccc;
-    width: 2rem;
-    height: 2rem;
-    transform: scale(1);
-    transition: all 0.6s ease-in-out;
-    animation: put_the_glasses 3s linear infinite;
-    cursor: pointer;
-}
-
-.icon.with_glasses {
-    width: 170rem;
-    height: 170rem;
-}
-
-/* -------------------- nav bar -------------------- */
-
-.nav__bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    color: white;
-    z-index: 4;
-    position: fixed;
-    transition: all 0.3s ease;
-}
-
-.nav__bar--container {
-    padding: 2.5em 2em;
-    width: 100%;
-    max-width: 55rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-.nav__bar--logo {
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.nav__bar--logo:hover {
-    animation: linear__color 2s linear infinite;
-}
-
-.nav__bar--toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 5%;
-    min-width: 2rem;
-    cursor: pointer;
-}
-
-.nav__bar--toggle span {
-    border: 1px solid white;
-    width: 100%;
-    transition: all 0.3s ease-in;
-}
-
-.nav__bar--toggle.close span:nth-child(1) {
-    transform: rotate(45deg) translateY(300%);
-}
-
-.nav__bar--toggle.close span:nth-child(2) {
-    transform: rotate(-45deg) translateY(-400%);
-}
-
-.nav__bar--toggle.close span:nth-child(3) {
-    opacity: 0;
-}
-
-.nav__bar--toggle:hover span {
-    animation: linear__color_borded 2s linear infinite;
-}
-
-.nav__menu {
-    width: 50vw;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    z-index: -3;
-    background: black;
-    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .5);
-    transition: all 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav__menu.active {
-    z-index: 2;
-    opacity: 1;
-}
-
-.nav__menu_items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    width: 80%;
-    opacity: 0;
-    transition: all 0.3s ease-in-out 0.3s;
-}
-
-.nav__menu.active .nav__menu_items {
-    opacity: 1;
-}
-
-.nav__menu--item {
-    color: white;
-    font-size: clamp(1rem, 2vw + 1rem, 2rem);
-    font-family: 'Quicksand', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-section {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* -------------------- home -------------------- */
-
-.container {
-    width: 100%;
-    max-width: 50rem;
-    padding: 2.5em 5.2em;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    transition: filter 0.5s ease;
-}
-
-.container.blurred {
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
-}
-
-.container.home h1 {
-    font-size: clamp(2rem, 3vw + 2rem, 8rem);
-    font-weight: 600;
-    position: relative;
-    width: fit-content;
-}
-
-.container.home p {
-    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
-    position: relative;
-}
-
-.container.home h1::after {
-    content: '';
-    width: 2px;
-    position: absolute;
-    right: -5px;
-    height: 90%;
-    background: white;
-    animation: blink 0.7s ease infinite;
-}
-
-.container.home h1.inactive::after {
-    height: 0;
-    width: 0;
-    animation: none;
-}
-
-.container.home p::after {
-    content: '';
-    width: 2px;
-    position: absolute;
-    right: -5px;
-    height: 90%;
-    background: white;
-    animation: blink 0.7s ease infinite;
-}
-
-.container.home p.inactive::after {
-    height: 0;
-    width: 0;
-    animation: none;
-}
-
-.icon__dow {
-    position: fixed;
-    bottom: 5px;
-    margin: 0 auto;
-}
-
-.icon__dow a {
-    color: white;
-    opacity: 1;
-    cursor: pointer;
-    text-decoration: none;
-    transition: opacity 0.5s ease-in;
-    animation: blinking 2s linear infinite
-}
-
-.icon__dow a.hide {
-    opacity: 0;
-}
-
-/* -------------------- quem somos -------------------- */
-
-.container.quem__somos p {
-    font-size: clamp(0.4rem, 4vw + 0.4rem, 1.5rem);
-    position: relative;
-    text-align: left;
-    font-weight: 100;
-    line-height: 1.5rem;
-}
-
-.container.quem__somos p::after {
-    content: '';
-    width: 2px;
-    position: absolute;
-    height: 1.2rem;
-    background: white;
-    animation: blink 0.7s ease infinite;
-}
-
-.red__text {
-    color: var(--red-color);
-    font-weight: bold;
-}
-
-.blue__text {
-    color: royalblue;
-    font-weight: bold;
-}
-
-/* -------------------- onde estamos -------------------- */
-
-.container.onde__estamos {
-    gap: 8rem;
-    padding: 2.5em;
-}
-
-.onde__estamos--item_container {
-    width: 100%;
-    box-shadow: 0px 3px 4px rgba(255, 255, 255, .5);
-}
-
-.onde__estamos--item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 2rem;
-    padding: 0.5rem;
-}
-
-.onde__estamos--item_container:nth-child(1), .onde__estamos--item_container:nth-child(3) {
-    border-bottom: 0.2px solid rgba(255, 255, 255, 0.3);
-    border-left: 0.2px solid rgba(255, 255, 255, 0.3);
-}
-
-.onde__estamos--item_container:nth-child(2) {
-    border-bottom: 0.2px solid rgba(255, 255, 255, 0.3);
-    border-right: 0.2px solid rgba(255, 255, 255, 0.3);
-}
-
-.map_container {
-    width: 50%;
-    height: 100%;
-}
-
-.map {
-    width: 100%;
-    height: 12.5rem;
-}
-
-.info__container {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 100%;
-    gap: 1rem;
-    min-width: 40%;
-}
-
-.onde__estamos--item_header {
-    text-align: left;
-    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
-    ;
-    padding: 0.5rem;
-    font-style: italic;
-}
-
-.onde__estamos--item_header h1 {
-    font-weight: 100;
-}
-
-.onde__estamos--item_header.middle {
-    text-align: right;
-}
-
-.info__container .info {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    cursor: pointer;
-    width: 100%;
-}
-
-.info__container.middle .info {
-    justify-content: flex-end;
-}
-
-.info__container .info.header span {
-    font-size: clamp(0.5rem, 3vw + 0.5rem, 1.3rem);
-}
-
-.info__container .info span {
-    font-size: clamp(0.2rem, 3vw + 0.2rem, 1rem);
-}
-
-.info__container .info .info_text {
-    margin-left: 0.5rem;
-    font-weight: 100;
-    text-decoration: none;
-    color: white;
-    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
-}
-
-.info__container .info span.address {
-    font-size: clamp(0.2rem, 2vw + 0.2rem, 0.8rem);
-    text-align: left;
-}
-
-.more_info__container {
-    text-align: left;
-    width: 30%;
-    font-weight: 100;
-    line-height: 1rem;
-    font-size: clamp(0.4rem, 2vw + 0.4rem, 1rem);
-}
-
-/* -------------------- Nossa Historia -------------------- */
-
-.container.nossa_historia p {
-    font-size: clamp(0.4rem, 4vw + 0.4rem, 1.5rem);
-    position: relative;
-    text-align: left;
-    font-weight: 100;
-    line-height: 2rem;
-}
-
-.ver_mais_text {
-    padding: 0.2rem;
-    color: black;
-    background: white;
-    font-weight: bold;
-    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
-    box-shadow: 1px 4px 4px rgba(255, 255, 255, .5);
-    cursor: pointer;
-}
-
-/* -------------------- Produtos -------------------- */
-
-#produtos {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.animation_section_produtos {
-    animation: centerToLeft 0.3s ease-in-out;
-}
-
-.animation_section_produtos--backwards {
-    animation: LeftTocenter 0.3s ease-in-out;
-}
-
-.container.produtos {
-    padding: 2.5em;
-    text-align: left;
-    align-items: flex-start;
-    max-width: 60rem;
-}
-
-.container.produtos h1 {
-    font-size: clamp(1rem, 2vw + 1.6rem, 4rem);
-    font-weight: 600;
-    position: relative;
-    width: fit-content;
-    background: white;
-    color: black;
-    padding: .5rem 1rem;
-    padding-left: 0;
-}
-
-.back_home {
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
-    padding: .5rem;
-    text-decoration: none;
-    box-shadow: 1px 4px 4px rgba(255, 255, 255, .5);
-}
-
-.produtos_info_container {
-    font-size: clamp(1rem, 2vw + 1.2rem, 2rem);
-    padding: 5rem 0;
-    display: flex;
-    gap: 5rem;
-    flex-direction: column;
-    font-weight: 100;
-    font-style: italic;
-    width: 100%;
-}
-
-.produtos_info_container--item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 0 .5rem 0;
-    border-bottom: 0.1px solid rgba(255, 255, 255, .2);
-    cursor: pointer;
-}
-
-.produtos_info_container--item .material-icons-outlined {
-    font-style: italic;
-    font-weight: 100;
-}
-
-/* -------------------- ARMAÇÂO WINDOW -------------------- */
-
-.ver_mais_container {
-    position: fixed;
-    width: 100%;
-    z-index: 3000;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: black;
-    flex-direction: column;
-    justify-content: flex-start;
-    animation: leftToRight 0.3s ease-in-out;
-    overflow-y: auto;
-}
-
-.ver_mais_container .container {
-    padding: 1rem;
-    max-width: 90%;
-    margin-top: 2rem;
-}
-
-.ver_mais_container--header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    padding: 2rem 2.5rem;
-    font-size: clamp(1rem, 2vw + 0.7rem, 2rem);
-}
-
-.ver_mais_container--header #btn_close {
-    font-size: clamp(2rem, 3vw + 2rem, 4rem);
-    cursor: pointer;
-}
-
-.filter__button_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-}
-
-.filter__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: black;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, .8);
-    padding: 0.8rem 3.5rem;
-    cursor: pointer;
-    transition: all 0.1s ease;
-}
-
-.filters__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 0 0.5rem;
-}
-
-.filters__container .filter {
-    font-size: clamp(0.2rem, 2vw + 0.2rem, 1rem);
-    background: rgba(255, 255, 255, .8);
-    color: black;
-    padding: 0.5em;
-    margin: 0.1em 0.5em;
-}
-
-.filter__button:hover {
-    background: rgba(255, 255, 255, .1);
-}
-
-.filter__button span {
-    font-size: clamp(1rem, 2vw + 0.7rem, 2rem);
-    margin-right: 5px;
-}
-
-.informative_text {
-    text-align: left;
-}
-
-.ver_mais_content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    gap: 0.5rem;
-    width: 100%;
-    place-items: center;
-}
-
-.confirm-close {
-    animation: rightToLeft 0.3s ease-in-out;
-}
-
-.informative_text {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 4;
-    transform: translateY(200%);
-    animation: bottomToTop 0.3s ease-in-out 1.5s forwards;
-}
-
-.informative_text--container {
-    position: relative;
-    width: 100%;
-    padding: 1rem;
-    font-size: clamp(0.2rem, 2.5vw + 0.2rem, 1.2rem);
-    line-height: 1.5rem;
-    box-shadow: 0 -2px 5px rgba(255, 255, 255, .5);
-    background: black;
-    left: 0;
-    bottom: 0;
-    color: white;
-}
-
-.informative_text--close {
-    position: absolute;
-    top: -1.5rem;
-    right: 5px;
-    background: white;
-    color: black;
-    cursor: pointer;
-    box-shadow: 1px -2px 5px rgba(255, 255, 255, .5);
-}
-
-.foto_holder {
-    width: 100%;
-    max-width: 20.5rem;
-    padding: 0.5rem;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    transform: translateY(40%);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    animation: bottomToTop--foto_holder 0.2s ease forwards 0.5s;
-}
-
-.foto_holder:nth-child(even) {
-    animation: bottomToTop--foto_holder 0.2s ease forwards 0.6s;
-}
-
-.foto_holder img {
-    width: 100%;
-    transition: all 0.2s ease-in-out;
-    max-height: 240px;
-}
-
-.foto_holder:hover {
-    transform: scale(1.04) translateY(0);
-}
-
-.foto_holder:hover img {
-    transform: scale(1.03);
-}
-
-.img_from, .img_info {
-    width: 100%;
-    text-align: right;
-    color: black;
-    padding-top: 0.2rem;
-}
-
-.img_info {
-    text-align: left;
-    padding-top: 0.5rem;
-    font-size: clamp(0.5rem, 1.5vw + 0.5rem, 1rem);
-}
-
-.img_from a {
-    color: black;
-    text-decoration: none;
-    font-size: clamp(0.5rem, 1vw + 0.5rem, 1rem);
-    font-weight: 100;
-    font-style: italic;
-}
-
-.price {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    background: white;
-    color: #89c017;
-    font-style: italic;
-    padding: 0.25rem 0.5rem;
-    font-size: clamp(1rem, 1vw + 1rem, 1rem);
-}
-
-/* ----------------- filters ---------------*/
-
-.filters_windown_container {
-    height: 100vh;
-    width: 100%;
-    z-index: 1000000;
-    position: fixed;
-    color: white;
-    display: flex;
-    top: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.confirm-close--filters {
-    background: none;
-    animation: niceDisappear 0.4s ease-in-out forwards;
-}
-
-.filters {
-    background: black;
-    padding: 0.5rem;
-    max-width: 90%;
-    width: 500px;
-    border: 0.5px solid white;
-    animation: niceAppear 0.3s ease-in-out forwards;
-    transition: all 0.3s ease-in-out;
-}
-
-.filters_header {
-    width: 100%;
-}
-
-.filters_header span {
-    cursor: pointer;
-}
-
-.mas_fem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.mas_fem div, .marcas--footer button {
-    padding: 0.5em;
-    margin: 0 0.5em;
-    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
-    border: 0.5px solid white;
-    cursor: pointer;
-    background: black;
-    transition: all 0.2s ease;
-}
-
-.mas_fem div.selected {
-    background: white;
-    border: 1px solid gray;
-    color: black;
-}
-
-.mas_fem div.selected:hover {
-    background: rgba(255, 255, 255, .9);
-}
-
-.marcas--footer button {
-    color: white;
-    margin: 0;
-}
-
-.mas_fem div:hover, .marca:hover, .marcas--footer button:hover {
-    background: rgba(255, 255, 255, .2);
-}
-
-.marcas__container {
-    width: 100%;
-    padding: 0.5em;
-}
-
-.marcas--header, .marcas--footer {
-    width: 100%;
-    text-align: left;
-    font-size: clamp(0.4rem, 3vw + 0.4rem, 1.5rem);
-    border-bottom: 0.5px solid white;
-    padding: 0 0 0.2rem 0;
-}
-
-.marcas--footer {
-    border-bottom: none;
-    text-align: right;
-    margin-top: 1rem;
-}
-
-.marcas-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 0.5rem;
-    padding: 1em 0;
-}
-
-.marca {
-    border: 0.5px solid white;
-    padding: 1rem;
-    font-size: clamp(0.2rem, 2.5vw + 0.2rem, 1rem);
-    cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.marca.selected {
-    background: white;
-    border: 1px solid black;
-    color: black;
-}
-
-/* ----------------- LENTES SECTION ---------------*/
-
-.ver_mais_container.lentes .container {
-    align-items: flex-start;
-    max-width: 50rem;
-    gap: 3rem;
-}
-
-.header--text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    font-size: clamp(1rem, 2vw + 1.6rem, 4rem);
-}
-
-.header--text.min {
-    font-size: clamp(1rem, 2vw + 1rem, 4rem);
-}
-
-.question {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 0 .5rem 0;
-    cursor: pointer;
-    transform: translateX(1000%);
-    font-size: clamp(1rem, 2vw + 1rem, 2rem);
-    border-bottom: 0.1px solid rgba(255, 255, 255, .2);
-    animation: rightTocenter 0.2s ease-in-out 0.1s forwards;
-}
-
-.container.questionContent {
-    display: block;
-    margin-top: 1rem;
-    padding: 0 0.5rem;
-    text-align: left;
-    max-width: 50rem;
-}
-
-.container.questionContent p {
-    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
-    margin-bottom: 2rem;
-    line-height: 1.5rem;
-}
-
-.container.questionContent h1 {
-    font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
-    margin-bottom: 1rem;
-}
-
-.question:nth-child(2) {
-    animation: rightTocenter 0.2s ease-in-out 0.2s forwards;
-}
-
-.question:nth-child(3) {
-    animation: rightTocenter 0.2s ease-in-out 0.3s forwards;
-}
-
-.question:nth-child(4) {
-    animation: rightTocenter 0.2s ease-in-out 0.4s forwards;
-}
-
-.question .material-icons-outlined {
-    font-style: italic;
-    font-weight: 100;
-}
-
-.img_container_lentes_section {
-    max-width: 100%;
-    max-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    position: relative;
-    gap: 0.5rem;
-}
-
-.img_container_lentes_section .img p {
-    margin: 0;
-    color: white;
-    font-size: clamp(1rem, 1vw + 1rem, 1rem);
-}
-.img{
-    padding: 0.2rem;
-    background: black;
-    border: 0.5px solid rgba(255, 255, 255, .5);
-}
-
-.img_lentes_section {
-    max-width: 100%;
-    max-height: 400px;
-}
-.minor_text{
-    font-size: clamp(1rem, 1vw + 1rem, 1rem);
-}
-
-@media (max-width: 32rem) {
-    .icons_side_container {
-        opacity: 0;
-    }
-    .sticky {
-        background: rgba(255, 255, 255, 0.8);
-        color: black;
-    }
-    .sticky .nav__bar--container {
-        padding: 1rem;
-    }
-    .sticky .nav__bar--logo {
-        color: black;
-    }
-    .sticky .nav__bar--toggle span {
-        border: 1px solid black;
-    }
-    .container.onde__estamos {
-        gap: 2rem;
-    }
-    .map_container {
-        width: 100%;
-    }
-    .onde__estamos--item {
-        justify-content: flex-start;
-        gap: 1rem;
-        flex-direction: column;
-    }
-    .onde__estamos--item.middle {
-        justify-content: flex-end;
-        flex-direction: column-reverse;
-    }
-    .info_text br {
-        display: none;
-    }
-    .info__container {
-        width: 100%;
-    }
-    .info__container.middle .info {
-        justify-content: flex-start;
-    }
-    .icon__dow {
-        bottom: 15px;
-    }
-    .onde__estamos--item_header, .onde__estamos--item_header.middle {
-        text-align: center;
-    }
-    .more_info__container {
-        width: 100%;
-    }
-    .ver_mais_container--header {
-        padding: 0.5rem;
-    }
-    .ver_mais_content {
-        grid-template-columns: 1fr;
-    }
-    .nav__menu {
-        width: 100vw;
-    }
-    .img_container_lentes_section span.b {
-        color: black;
-        bottom: 0;
-        top: unset;
-        margin: unset;
-    }
-
-}
-
-@media (max-width: 25rem) {
-    .onde__estamos--item {
-        justify-content: flex-start;
-        gap: 1rem;
-        flex-direction: column;
-    }
-    .onde__estamos--item.middle {
-        justify-content: flex-end;
-    }
-    .info_text br {
-        display: none;
-    }
-    .info__container .info {
-        justify-content: flex-start;
-    }
-}
-
-@keyframes linear__color_borded {
-    0% {
-        border: 1px solid white;
-        background: white;
-    }
-    25% {
-        border: 1px solid blue;
-        background: yellow;
-    }
-    50% {
-        border: 1px solid var(--red-color);
-        background: blue;
-    }
-    75% {
-        border: 1px solid yellow;
-        background: var(--red-color);
-    }
-    100% {
-        border: 1px solid white;
-        background: white;
-    }
-}
-
-@keyframes linear__color {
-    0% {
-        color: white;
-    }
-    25% {
-        color: yellow;
-    }
-    50% {
-        color: blue;
-    }
-    75% {
-        color: red;
-    }
-    100% {
-        color: white;
-    }
-}
-
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes blinking {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes blinking_text {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes put_the_glasses {
-    0% {
-        transform: rotate(10deg);
-    }
-    20% {
-        transform: rotate(0deg);
-    }
-    40% {
-        transform: rotate(-10deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    }
-    80% {
-        transform: rotate(10deg);
-    }
-    90% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(10deg);
-    }
-}
-
-@keyframes centerToLeft {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes rightTocenter {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes LeftTocenter {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes rightToLeft {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes leftToRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes bottomToTop {
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes bottomToTop--foto_holder {
-    from {
-        transform: translateY(40%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes niceDisappear {
-    to {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-@keyframes niceAppear {
-    from {
-        transform: scale(0);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
+import { Question } from "../Questions.js";
+
+export const VerMaisLentes = {
+    open() {
+        const html = `
+        <section id="lentes" class="ver_mais_container lentes">
+            <div class="ver_mais_container--header">
+                <span id="btn_close" class="material-icons-outlined">arrow_back_ios</span>
+                <div class="header--text">
+                    <span>Lentes</span>
+                </div>
+            </div>
+            <div class="container">
+                <div data-to="boaLente" class="question">
+                    <span>Como escolher uma boa lente?</span>
+                    <span class="material-icons-outlined">arrow_forward_ios</span>
+                </div>
+                <div data-to="MateriaisLente" class="question">
+                    <span>Quais os materiais disponíveis?</span>
+                    <span class="material-icons-outlined">arrow_forward_ios</span>
+                </div>
+                <div data-to="TratamentosLentes" class="question">
+                    <span>Quais os tratamentos disponíveis?</span>
+                    <span class="material-icons-outlined">arrow_forward_ios</span>
+                </div>
+                <div data-to="LenteArmacao" class="question">
+                    <span>A lente para minha armação</span>
+                    <span class="material-icons-outlined">arrow_forward_ios</span>
+                </div>
+            </div>
+        </section>
+
+        `;
+
+        const template = document.createElement("template");
+        template.innerHTML = html;
+
+
+        const windownContainer = template.content.querySelector(".ver_mais_container");
+        const btnClose = template.content.querySelector("#btn_close");
+        const questions = template.content.querySelectorAll(".question");
+
+        btnClose.addEventListener('click', () => {
+            this._close(windownContainer);
+            document.querySelector('#produtos').classList.remove('animation_section_produtos');
+            document.querySelector('#produtos').classList.add('animation_section_produtos--backwards');
+        });
+
+        document.body.appendChild(template.content);
+        document.body.classList.add('stop-scrolling');
+
+        questions.forEach(question => question.addEventListener('click', () => {
+
+            if (question.dataset.to === 'boaLente') {
+                Question.open('Como escolher uma boa lente?', this._BoaLente());
+            }
+
+            if (question.dataset.to === 'MateriaisLente') {
+                Question.open('Quais os materiais disponíveis?');
+            };
+
+            if (question.dataset.to === 'TratamentosLentes') {
+                Question.open('Quais os tratamentos disponíveis?');
+            };
+
+            if (question.dataset.to === 'LenteArmacao') {
+                Question.open('A lente para minha armação');
+            };
+
+        }));
+
+    },
+
+    _close(windownContainer) {
+        windownContainer.classList.add('confirm-close');
+
+        windownContainer.addEventListener('animationend', () => {
+            document.body.removeChild(windownContainer);
+            document.body.classList.remove('stop-scrolling');
+        })
+    },
+
+    _BoaLente() {
+        return `
+        <p>Um material adequado,
+        tratamentos que combinem com seu dia a dia e com estilo da sua armação,
+        são características de uma boa lente.</p>
+
+    <h1>O Material Adequado</h1>
+    <p>Cada armação pede um tipo de material de lente.</p>
+    <p>
+        <b>Armações Abertas e Armações balgriff:</b><br><br>
+        Por esse tipo de armação não proteger totalmente a lente, o material adequado seria o mais resistente
+        possível, como o policarbonato,
+        resina 1.61, resina 1.67.<br><br>
+
+        Armações abertas geralmente seguram as lentes com a ajuda de um fio de nylon. Um friso é feito em volta
+        de toda a lente, onde passa o
+        nylon. Para aguentar esse friso, a lente precisa ser bastante resistente, pois se não, corre-se o risco
+        de quebrar na hora da montagem.<br><br>
+    </p>
+
+    <div class="img_container_lentes_section b">
+        <div class="img">
+            <img class="img_lentes_section" src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
+            <p>Armação aberta</p>
+        </div>
+        <div class="img">
+            <img class="img_lentes_section" src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
+            <p>Armação balgriff</p>
+        </div>
+    </div>
+
+    <p>
+        Já as Armações balgriff,
+        seguram a lente através de parafusos fixados na própia lente,
+        causando assim a necessidade da sua resistência.
+    </p>
+
+    <p><b>Armações fechadas:</b><br><br>
+        Esse tipo de armação suporta todos os materiais de lente.
+        Por serem totalmente fechadas, essas armações oferecem uma proteção a mais para a lente, já que as
+        mesmas não correm o risco de
+        acabarem batendo, ou esbarrando suas bordas. <br><br>
+
+        Lentes em resina comum (1.56) são as mais utilizadas nos casos de armações fechadas. <br><br>
+
+    </p>
+    <div class="img_container_lentes_section b">
+        <div class="img">
+            <img class="img_lentes_section" src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
+            <p>Armação fechada em metal</p>
+        </div>
+        <div class="img">
+            <img class="img_lentes_section" src="./code/Armacoes/images/DulcetRedondaAzul.jpeg" alt="armacao">
+            <p>Armação fechada em acetato</p>
+        </div>
+    </div>
+
+    <p>
+        Existem outros fatores, como o seu grau em relação ao tamanho de sua armação, que alterariam o tipo de sua lente.
+        Caso você tenha um grau alto de miopia, por exemplo, já não é aconselhavel a escolha de armações grandes.
+    </p>
+
+    <h1>O Tratamento para você</h1>
+    <p>
+        Tratamentos são como adicionais que colocamos na lente, camadas a mais de proteção, ou, que ajudam na estética do seu óculos.
+        <b class="minor_text">(Para mais detalhes olhe a seção de tratamentos disponiveis.)</b><br>
+    </p>
+
+    <p>A primeira pergunta que você deve se fazer é, "como é o meu dia a dia?".<br> Você fica muito no celular, computador, ou aparelhos que geram luz artificial?
+        Você fica muito tempo exposto a luz do sol?<br>
+        Tudo isso dita como deve ser sua lente. Se você fica muito exposto a luz artificial, tratamentos antirreflexo seriam o ideal para você, tanto o comum quanto o
+        Blue Cut. Agora, se você fica muito exposto ao sol, ou a luz do sol te incomoda, tratamentos fotosensíveis seriam o ideal para você.<br><br>
+        
+        <b>O sol não me incomoda, porém, fico muito tempo no celular. Qual antirreflexo escolher?</b><br><br>
+        
+        O antirreflexo Blue cut é ideal para aqueles que ficam muito tempo expostos a luz artificial. Esse tipo de lente bloqueia a luz azul nociva que sai de tais aparelhos,
+        além de proporcionarem um conforto a mais para a sua visão.<br>
+        Essas lentes foram desenvolvidas especialmente para bloquear a luz UV nociva, tanto a que sai do sol quanto as artificiais. São famosas por serem uma espécie de óculos de sol,
+        porém, sem a necessidade de escurecer.<br><br>
+
+        <b>O sol não me incomoda, não fico muito tempo no celular, porém, não acho legal todo aquele brilho na lente. Qual antirreflexo escolher?</b><br><br>
+
+        Nesse caso o antirreflexo ideal
+    </p>
+        `;
     }
 }
