@@ -148,8 +148,21 @@ export const VerMaisLentes = {
         <b class="minor_text">(Para mais detalhes olhe a seção de tratamentos disponiveis.)</b><br>
     </p>
 
-    <p>A primeira pergunta que você deve se fazer é, "como é o meu dia a dia?" Você fica muito no celular, computador, ou aparelhos que geram luz artificial?
-        Você fica muito tempo exposto a luz do sol?    
+    <p>A primeira pergunta que você deve se fazer é, "como é o meu dia a dia?".<br> Você fica muito no celular, computador, ou aparelhos que geram luz artificial?
+        Você fica muito tempo exposto a luz do sol?<br>
+        Tudo isso dita como deve ser sua lente. Se você fica muito exposto a luz artificial, tratamentos antirreflexo seriam o ideal para você, tanto o comum quanto o
+        Blue Cut. Agora, se você fica muito exposto ao sol, ou a luz do sol te incomoda, tratamentos fotosensíveis seriam o ideal para você.<br><br>
+        
+        <b>O sol não me incomoda, porém, fico muito tempo no celular. Qual antirreflexo escolher?</b><br><br>
+        
+        O antirreflexo Blue cut é ideal para aqueles que ficam muito tempo expostos a luz artificial. Esse tipo de lente bloqueia a luz azul nociva que sai de tais aparelhos,
+        além de proporcionarem um conforto a mais para a sua visão.<br>
+        Essas lentes foram desenvolvidas especialmente para bloquear a luz UV nociva, tanto a que sai do sol quanto as artificiais. São famosas por serem uma espécie de óculos de sol,
+        porém, sem a necessidade de escurecer.<br><br>
+
+        <b>O sol não me incomoda, não fico muito tempo no celular, porém, não acho legal todo aquele brilho na lente. Qual antirreflexo escolher?</b><br><br>
+
+        Nesse caso o antirreflexo ideal
     </p>
         `;
     }
