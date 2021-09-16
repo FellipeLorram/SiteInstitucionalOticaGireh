@@ -82,7 +82,7 @@ export const VerMaisLentes = {
 
     _BoaLente() {
         return `
-        <p>Um material adequado,
+        <p >Um material adequado,
         tratamentos que combinem com seu dia a dia e com estilo da sua armação,
         são características de uma boa lente.</p>
 
@@ -129,11 +129,11 @@ export const VerMaisLentes = {
     <div class="img_container_lentes_section b">
         <div class="img">
             <img class="img_lentes_section" src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
-            <p>Armação fechada em metal</p>
+            <p>Fechada em metal</p>
         </div>
         <div class="img">
             <img class="img_lentes_section" src="./code/Armacoes/images/DulcetRedondaAzul.jpeg" alt="armacao">
-            <p>Armação fechada em acetato</p>
+            <p>Fechada em acetato</p>
         </div>
     </div>
 
@@ -162,8 +162,30 @@ export const VerMaisLentes = {
 
         <b>O sol não me incomoda, não fico muito tempo no celular, porém, não acho legal todo aquele brilho na lente. Qual antirreflexo escolher?</b><br><br>
 
-        Nesse caso o antirreflexo ideal
+        Nesse caso, o antirreflexo comum já supriria sua necessidade. O papel do antirreflexo é eliminar os reflexos presente nas lentes sem tratamento (ou lentes brancas).
+        </p>
+        <div class="img_container_lentes_section b">
+            <div class="img">
+                <img class="img_lentes_section" src="./code/Lentes/images/lente_sem_ar.jpeg" alt="armacao">
+                <p>Sem antirreflexo</p>
+            </div>
+            <div class="img">
+                <img class="img_lentes_section" src="./code/Lentes/images/lente_com_ar.jpeg" alt="armacao">
+                <p>Com antirreflexo</p>
+            </div>
+        </div>
+        <p>
+        <b>O sol me incomoda, e passo muito tempo no celular. Qual lente escolher?</b><br><br>
+        Lentes fotossensiveis, são as famosas lentes que escurecem no sol. Esse tipo de lente tem a habilidade de escurecer em ambientes com alta 
+        incidência de luz UV, a luz prejudicial que sai do sol, e de clarear em ambientes com pouca incidência de UV. 
+        Essas lentes são essenciais para quem tem sensibilidade a luz do sol, além de proporcionarem uma 
+        experiência 2 em 1, onde você tem um óculos de sol e um óculos comum na mesma lente.
     </p>
+    <p>
+        A lente ideal para todos seria aquela que mais protege, no caso lentes fotossensiveis com o tratamento blue cut, porém,
+        se no seu dia a dia, você não sente a necessidade de toda a proteção, você pode escolher aquela que melhor se adapta as suas necessidades.
+    </p>
+
         `;
     }
 }
