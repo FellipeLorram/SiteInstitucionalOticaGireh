@@ -320,7 +320,11 @@ section {
 .onde__estamos--item_container:hover .info__container .info .telefone {
     color: blue;
     animation: blinking_text 1s ease-in-out infinite;
+}
 
+.onde__estamos--item_container:hover .info__container .info .localização {
+    color: red;
+    animation: blinking_text 1s ease-in-out infinite;
 }
 
 .onde__estamos--item_container:hover .info__container .info .fa-instagram {
@@ -330,7 +334,6 @@ section {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: blinking_text 1s ease-in-out infinite;
-
 }
 
 .onde__estamos--item {
@@ -409,7 +412,7 @@ section {
 }
 
 .info__container .info .info_text {
-    margin-left: 0.5rem;
+    margin: 0 0.5rem;
     font-weight: 100;
     text-decoration: none;
     color: white;
