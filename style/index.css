@@ -946,6 +946,19 @@ section {
     font-size: clamp(1rem, 1vw + 1rem, 1rem);
 }
 
+.last_info {
+    background: white;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.container.questionContent .last_info p {
+    color: black;
+    font-weight: bold;
+    text-align: justify;
+    margin: 0;
+}
+
 @media (max-width: 32rem) {
     .icons_side_container {
         opacity: 0;
