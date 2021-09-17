@@ -174,17 +174,22 @@ export const VerMaisLentes = {
                 <p>Com antirreflexo</p>
             </div>
         </div>
+        <br><br>
         <p>
         <b>O sol me incomoda, e passo muito tempo no celular. Qual lente escolher?</b><br><br>
         Lentes fotossensiveis, são as famosas lentes que escurecem no sol. Esse tipo de lente tem a habilidade de escurecer em ambientes com alta 
-        incidência de luz UV, a luz prejudicial que sai do sol, e de clarear em ambientes com pouca incidência de UV. 
+        incidência de luz UV, a luz prejudicial que o sol emiti, e de clarear em ambientes com pouca incidência de UV. 
         Essas lentes são essenciais para quem tem sensibilidade a luz do sol, além de proporcionarem uma 
         experiência 2 em 1, onde você tem um óculos de sol e um óculos comum na mesma lente.
+        <br>Para quem tem sensibilidade a luz do sol, e fica muito tempo no celular e aparelhos que emitem luz UV, o ideal seriam lentes Fotossensiveis
+        com o antirreflexo Blue Cut.
     </p>
-    <p>
-        A lente ideal para todos seria aquela que mais protege, no caso lentes fotossensiveis com o tratamento blue cut, porém,
-        se no seu dia a dia, você não sente a necessidade de toda a proteção, você pode escolher aquela que melhor se adapta as suas necessidades.
-    </p>
+    <div class="last_info">
+        <p>
+            A lente ideal para todos seria aquela que mais protege, no caso lentes fotossensiveis com o tratamento blue cut, porém,
+            se no seu dia a dia, você não sente a necessidade de toda a proteção, você pode escolher aquela que melhor se adapta as suas necessidades.
+        </p>
+    </div>
 
         `;
     },
