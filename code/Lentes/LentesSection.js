@@ -56,7 +56,7 @@ export const VerMaisLentes = {
             }
 
             if (question.dataset.to === 'MateriaisLente') {
-                Question.open('Quais os materiais disponíveis?');
+                Question.open('Quais os materiais disponíveis?', this._MateriaisDisponiveis());
             };
 
             if (question.dataset.to === 'TratamentosLentes') {
@@ -102,11 +102,11 @@ export const VerMaisLentes = {
 
     <div class="img_container_lentes_section b">
         <div class="img">
-            <img class="img_lentes_section" src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
+            <img class="img_lentes_section" src="./code/Lentes/images/ArmaçãoAberta.jpeg" alt="armacao">
             <p>Armação aberta</p>
         </div>
         <div class="img">
-            <img class="img_lentes_section" src="./code/Armacoes/images/oakleyPretaAberta.jpeg" alt="armacao">
+            <img class="img_lentes_section" src="./code/Lentes/images/ArmaçãoBalgriff.jpeg" alt="armacao">
             <p>Armação balgriff</p>
         </div>
     </div>
@@ -187,5 +187,22 @@ export const VerMaisLentes = {
     </p>
 
         `;
-    }
+    },
+
+    _MateriaisDisponiveis() {
+        return `
+            <p>
+            A escolha do material adequado é muito importante para o resultado final do seus óculos. É o material que dita se sua lente vai ficar
+            grossa ou fina, resistente ou frágil, se vai arranhar com facilidade ou não.
+            <br><br>
+            Existem muitos tipos de materias, de forma básica, são alguns deles: Resina Comum, Policarbonato, 
+            Resina 1.61, Resina 1.67, Resina 1.70, etc... 
+
+            </p>
+            <h1>Resina Comum</h1>
+            <p>
+                A resina comum ou resina 1.56 é muito utilizada em 
+            </p>
+        `;
+     }
 }
