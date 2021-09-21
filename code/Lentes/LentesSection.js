@@ -60,11 +60,11 @@ export const VerMaisLentes = {
             };
 
             if (question.dataset.to === 'TratamentosLentes') {
-                Question.open('Quais os tratamentos disponíveis?');
+                Question.open('Quais os tratamentos disponíveis?', this._TratamentosDisponiveis());
             };
 
             if (question.dataset.to === 'LenteArmacao') {
-                Question.open('A lente para minha armação');
+                Question.open('A lente para minha armação', this._LenteParaMinhaArmção());
             };
 
         }));
@@ -190,24 +190,341 @@ export const VerMaisLentes = {
             se no seu dia a dia, você não sente a necessidade de toda a proteção, você pode escolher aquela que melhor se adapta as suas necessidades.
         </p>
     </div>
-
         `;
     },
 
     _MateriaisDisponiveis() {
         return `
             <p>
-            A escolha do material adequado é muito importante para o resultado final do seus óculos. É o material que dita se sua lente vai ficar
-            grossa ou fina, resistente ou frágil, se vai arranhar com facilidade ou não.
-            <br><br>
-            Existem muitos tipos de materias, de forma básica, são alguns deles: Resina Comum, Policarbonato, 
-            Resina 1.61, Resina 1.67, Resina 1.70, etc... 
+                A escolha do material adequado é muito importante para o resultado final do seus óculos. É o material que dita se sua lente vai ficar
+                grossa ou fina, resistente ou frágil, se vai arranhar com facilidade ou não.
+                <br><br>
+                Existem muitos tipos de materias, de forma básica, são alguns deles: Resina Comum, Policarbonato, 
+                Resina 1.61, Resina 1.67, Resina 1.70, etc... 
 
             </p>
-            <h1>Resina Comum</h1>
+
+            <h1>O indice de refração</h1>
             <p>
-                A resina comum ou resina 1.56 é muito utilizada em 
+               O indice de refração é esse numerozinho que vem logo após a lente. mas o que isso significa? Esse número diz respeito a espessura da lente, quanto 
+               maior esse número mais fina é a lente, quanto menor, mais grossa. 
             </p>
+
+            <h1 class="mt_large">Resina Comum</h1>
+            <div class="card_info_lentes">
+                <div class="card_info_lentes--body">
+                    <div class="atributo">
+                        <span class="card_info_lentes--body--text">Resistência</span>
+                        <div class="card_info_lentes--body--atributo">
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                        </div>
+                    </div>
+                    <div class="atributo">
+                        <span class="card_info_lentes--body--text">Transparência</span>
+                        <div class="card_info_lentes--body--atributo">
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                        </div>
+                    </div>
+                    <div class="atributo">
+                        <span class="card_info_lentes--body--text">Espessura</span>
+                        <div class="card_info_lentes--body--atributo">
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                            <span class="fill not"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_info_lentes--footer">
+                    <span>Indice de refração</span>
+                    <span>1.49 ou 1.50 ou 1.56</span>
+                </div>
+            </div>
+            <p>
+                A resina comum ou resina 1.56 é muito utilizada em armações fechadas e em graus não muito altos (Acima de 3 de miopia). 
+                O material de resina é um dos materiais mais transparntes para a lente, porém, a resina comum não é tão resistente
+                quanto as outras, o que impede de ser afinada ao máximo. <br><br>
+                Por ser mais frágil, esse material não é recomendado para armações abertas ou armações furadas, pois corre-se o risco de quebrar com facilidade 
+            </p>
+            
+            <h1 class="mt_large">Policarbonato</h1>
+            <div class="card_info_lentes">
+            <div class="card_info_lentes--body">
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Resistência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Transparência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Espessura</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_info_lentes--footer">
+                <span>Indice de refração</span>
+                <span>1.59</span>
+            </div>
+        </div>
+            <p>
+                O Policarbonato é um dos materiais mais resistente, porém perde em transparência. Pode ser usado em qualquer tipo de armação, desde as furadas até as fechadas.
+                Por ser mais resistente que a resina comum, ela permite chegar a um melhor resultado final no quesito espessura, sendo recomendada para graus entre 2 e 4.
+                Seu indice de refração é 1.59.
+            </p>
+
+            <h1 class="mt_large">Resina 1.61</h1>
+            <div class="card_info_lentes">
+            <div class="card_info_lentes--body">
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Resistência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Transparência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Espessura</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_info_lentes--footer">
+                <span>Indice de refração</span>
+                <span>1.61</span>
+            </div>
+        </div>
+            <p>
+                Com um indice de refração maior do que a do policarbonato, e da "familia" das resinas, a resina 1.61 é resistente, transparente e também pode ir em qualquer 
+                armação. Recomendado para graus entre 3 e 5.
+            </p>
+            <h1 class="mt_large">Resina 1.67</h1>
+            <div class="card_info_lentes">
+            <div class="card_info_lentes--body">
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Resistência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Transparência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Espessura</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_info_lentes--footer">
+                <span>Indice de refração</span>
+                <span>1.67</span>
+            </div>
+        </div>
+            <p>
+                Igual a resina 1.61, porem, com indice de refração maior, a possibilidade de afinar aumenta. Recomendado para graus entre 5 e 7.
+            </p>
+            <h1 class="mt_large">Resina 1.70</h1>
+            <div class="card_info_lentes">
+            <div class="card_info_lentes--body">
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Resistência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Transparência</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill not"></span>
+                        <span class="fill not"></span>
+                    </div>
+                </div>
+                <div class="atributo">
+                    <span class="card_info_lentes--body--text">Espessura</span>
+                    <div class="card_info_lentes--body--atributo">
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                        <span class="fill"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_info_lentes--footer">
+                <span>Indice de refração</span>
+                <span>1.70</span>
+            </div>
+        </div>
+            <p>
+                A resina 1.70 é uma das lentes mais finas no mercado, e a sua vantagem é que ja vem com o tratamento Blue cut de fábrica. Recomendado para graus acima de 7.
+            </p>
+
+            <div class="last_info">
+                <p>
+                    Existem outros materiais, porém, as informações passadas ja lhe darão uma boa base sobre como escolher seus óculos.
+                </p>
+            </div>
+    
         `;
-     }
+    },
+
+    _TratamentosDisponiveis() {
+        return `
+            <p>
+                O que são os tratamentos? tratamento são camadas a mais que você pode adicionar na sua lente, de proteção, ou que ajudam na estética
+                da sua lente. O famoso "Seus óculos possuem antirreflexo?, Sua lente é uma lente branca?, Seus óculos escurecem no sol?" <br><br>
+                Existe diversos tipos de tratamentos, mas geralmente derivam do Antirreflexo e do Fotossensivel.
+
+            </p>
+            <h1>O que é o antirreflexo?<h1>
+        `;
+    },
+    _LenteParaMinhaArmção() {
+        return ``;
+    }
 }
