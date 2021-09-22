@@ -1044,11 +1044,82 @@ section {
     color: black;
 }
 
-.mt_large {
-    margin-top: 4rem;
+.alguma__duvida--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 100%;
+    color: white;
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.alguma__duvida--text {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+    font-weight: 100;
+    padding: .5em;
+}
+
+.fieldset__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: .2rem;
+}
+
+legend span {
+    font-size: clamp(2rem, 1vw + 2rem, 1.5rem);
+    padding: .2em;
+    cursor: pointer;
+}
+
+legend span i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(2rem, 1vw + 2rem, 1.5rem);
+}
+
+legend .whatsapp {
+    color: #128C7E;
+}
+
+fieldset a {
+    color: white;
+    font-style: italic;
+    font-size: clamp(1rem, 1vw + 1rem, 2rem);
+    margin: .5rem;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+
+}
+
+
+.alguma__duvida--container fieldset {
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
 }
 
 @media (max-width: 32rem) {
+    .fieldset__container {
+        flex-direction: column;
+    }
     .icons_side_container {
         opacity: 0;
     }
@@ -1308,4 +1379,8 @@ section {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+.mt_large {
+    margin-top: 4rem;
 }
