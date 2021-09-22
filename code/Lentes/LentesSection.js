@@ -190,6 +190,25 @@ export const VerMaisLentes = {
             se no seu dia a dia, você não sente a necessidade de toda a proteção, você pode escolher aquela que melhor se adapta as suas necessidades.
         </p>
     </div>
+    <div class="alguma__duvida--container mt_large">
+
+        <span class="alguma__duvida--text">Alguma duvida?</span>
+        <span class="alguma__duvida--text">Nos chame no whatsapp ou instagram</span>
+
+        <div class="fieldset__container">
+            <fieldset>
+                <legend><span class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></span></legend>
+                <a href="https://www.instagram.com/oticagireh/">@oticagireh</a>
+                <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+            </fieldset>
+            <fieldset>
+                <legend><span class="material-icons-outlined whatsapp">whatsapp</span></legend>
+                <a href="https://api.whatsapp.com/send?phone=5521965657508"class="info_text">Caju: <u>(21)96565-7508</u></a>
+                <a href="https://api.whatsapp.com/send?phone=5521981950372">Pinheiro: <u>(21)98195-0372</u></a>
+            </fieldset>
+        </div>
+    </div>
+
         `;
     },
 
@@ -509,7 +528,25 @@ export const VerMaisLentes = {
                     Existem outros materiais, porém, as informações passadas ja lhe darão uma boa base sobre como escolher seus óculos.
                 </p>
             </div>
-    
+            <div class="alguma__duvida--container mt_large">
+
+            <span class="alguma__duvida--text">Alguma duvida?</span>
+            <span class="alguma__duvida--text">Nos chame no whatsapp ou instagram</span>
+
+            <div class="fieldset__container">
+                <fieldset>
+                    <legend><span class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></span></legend>
+                    <a href="https://www.instagram.com/oticagireh/">@oticagireh</a>
+                    <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                </fieldset>
+                <fieldset>
+                    <legend><span class="material-icons-outlined whatsapp">whatsapp</span></legend>
+                    <a href="https://api.whatsapp.com/send?phone=5521965657508"class="info_text"><span>Caju:</span> (21)96565-7508</a>
+                    <a href="https://api.whatsapp.com/send?phone=5521981950372"><span>Pinheiro:</span> (21)98195-0372</a>
+                </fieldset>
+            </div>
+        </div>
+
         `;
     },
 
@@ -522,9 +559,71 @@ export const VerMaisLentes = {
 
             </p>
             <h1>O que é o antirreflexo?<h1>
+            <p>
+                O antirreflexo e um tratamento que serve para eliminar os reflexos aparentes na lentes,
+                aquele brilho feio que fica na frente da lente, que além de atrapalhar na estética, atrapalha também na visão.
+            </p>
+            <h1>O antirreflexo Blue Cut<h1>
+            <p>
+                Assim como o antirreflexo comum o Blue cut também filtra a luz gerada artificialmente, porém, além de filtrar,
+                bloqueia totalmente esse tipo de luz, tem a mesma proteção que um óculos de sol sem a necessidade de escurecer.
+                Essa e a lente mais recomendada para quem passa muito tempo no celular, ou computador, ou ambientes com luzes artificiais.
+                Assim como o comum, não é recomendada para quem passa muito tempo em ambientes com muita quentura
+            </p>
+            <h1>As lentes fotossensiveis<h1>
+            <p>
+                As lentes fotossensiveis são as famosas lentes que escurecem no sol. 
+                Essas lentes tem a habilidade de escurecer no sol e clarear em ambientes fechados, proporcionando uma experiência 2 em 1, 
+                onde você tem tanto um óculos comum, quando um óculos de sol. Muito recomendado para quem tem sensibilidade a luz solar.
+            </p>
+            <div class="last_info">
+                <p>
+                    Os tratamentos pode ser sobrepostos uns nos outros, ou seja, 
+                    você pode ter uma lente fotossensível com antirreflexo, tanto o antirreflexo comum, como o antirreflexo Blue cut
+                </p>
+            </div>
+            <div class="alguma__duvida--container mt_large">
+
+                <span class="alguma__duvida--text">Alguma duvida?</span>
+                <span class="alguma__duvida--text">Nos chame no whatsapp ou instagram</span>
+
+                <div class="fieldset__container">
+                    <fieldset>
+                        <legend><span class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></span></legend>
+                        <a href="https://www.instagram.com/oticagireh/">@oticagireh</a>
+                        <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                    </fieldset>
+                    <fieldset>
+                        <legend><span class="material-icons-outlined whatsapp">whatsapp</span></legend>
+                        <a href="https://api.whatsapp.com/send?phone=5521965657508"class="info_text"><span>Caju:</span> (21)96565-7508</a>
+                        <a href="https://api.whatsapp.com/send?phone=5521981950372"><span>Pinheiro:</span> (21)98195-0372</a>
+                    </fieldset>
+                </div>
+            </div>
         `;
     },
     _LenteParaMinhaArmção() {
-        return ``;
+        return `
+        
+        <div class="alguma__duvida--container mt_large">
+
+            <span class="alguma__duvida--text">Alguma duvida?</span>
+            <span class="alguma__duvida--text">Nos chame no whatsapp ou instagram</span>
+
+            <div class="fieldset__container">
+                <fieldset>
+                    <legend><span class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></span></legend>
+                    <a href="https://www.instagram.com/oticagireh/">@oticagireh</a>
+                    <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                </fieldset>
+                <fieldset>
+                    <legend><span class="material-icons-outlined whatsapp">whatsapp</span></legend>
+                    <a href="https://api.whatsapp.com/send?phone=5521965657508"class="info_text"><span>Caju:</span> (21)96565-7508</a>
+                    <a href="https://api.whatsapp.com/send?phone=5521981950372"><span>Pinheiro:</span> (21)98195-0372</a>
+                </fieldset>
+            </div>
+        </div>
+
+        `;
     }
 }
