@@ -38,7 +38,7 @@ export const Question = {
 
         windownContainer.addEventListener('animationend', () => {
             document.body.removeChild(windownContainer);
-            document.body.classList.remove('stop-scrolling');
+            
         })
     },
 }
