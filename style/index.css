@@ -1116,6 +1116,17 @@ fieldset a {
     width: 100%;
 }
 
+.container.questionContent ul li{
+    font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+    padding: .5em;
+    padding-left: 0;
+}
+
+.container.questionContent ul {
+    margin-bottom: 4rem;
+}
+
+
 @media (max-width: 32rem) {
     .fieldset__container {
         flex-direction: column;
@@ -1383,4 +1394,9 @@ fieldset a {
 
 .mt_large {
     margin-top: 4rem;
+}
+
+h2{
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+    margin-bottom: 1rem;
 }
