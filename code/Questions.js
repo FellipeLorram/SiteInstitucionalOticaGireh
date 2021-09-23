@@ -24,8 +24,8 @@ export const Question = {
 
         btnClose.addEventListener('click', () => {
             this._close(windownContainer);
-            document.querySelector('#lentes').classList.remove('animation_section_produtos');
-            document.querySelector('#lentes').classList.add('animation_section_produtos--backwards');
+            if (document.querySelector('#lentes')) document.querySelector('#lentes').classList.remove('animation_section_produtos');
+            if (document.querySelector('#lentes')) document.querySelector('#lentes').classList.add('animation_section_produtos--backwards');
         });
 
         document.body.appendChild(template.content);
