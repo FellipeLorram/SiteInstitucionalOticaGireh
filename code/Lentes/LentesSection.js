@@ -27,6 +27,26 @@ export const VerMaisLentes = {
                     <span>A lente para minha armação</span>
                     <span class="material-icons-outlined">arrow_forward_ios</span>
                 </div>
+
+                <div class="alguma__duvida--container">
+
+                    <span class="alguma__duvida--text">Alguma duvida?</span>
+                    <span class="alguma__duvida--text">Nos chame no whatsapp ou instagram</span>
+
+                    <div class="fieldset__container">
+                        <fieldset>
+                            <legend><span class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></span></legend>
+                            <a href="https://www.instagram.com/oticagireh/">@oticagireh</a>
+                            <a href="https://www.instagram.com/oticagirehoficial/">@oticagirehoficial</a>
+                        </fieldset>
+                        <fieldset>
+                            <legend><span class="material-icons-outlined whatsapp">whatsapp</span></legend>
+                            <a href="https://api.whatsapp.com/send?phone=5521965657508"class="info_text"><span>Caju:</span> (21)96565-7508</a>
+                            <a href="https://api.whatsapp.com/send?phone=5521981950372"><span>Pinheiro:</span> (21)98195-0372</a>
+                        </fieldset>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
@@ -625,5 +645,7 @@ export const VerMaisLentes = {
         </div>
 
         `;
-    }
+    },
+
+
 }
